@@ -1,0 +1,18 @@
+name: Struktura repozytorium
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sprawdź wymagane katalogi
+        run: |
+          for d in docs contracts engine android-app backend test-data tools; do
+            test -d "$d" || { echo "Brak katalogu: $d"; exit 1; }
+          done
+          echo "Struktura repozytorium jest poprawna"
