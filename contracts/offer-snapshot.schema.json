@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "offer-snapshot.schema.json",
+  "title": "Migawka ofert lokat, wersja schematu 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_date", "revision", "generated_at", "banks", "offers"],
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+    "snapshot_date": { "$ref": "#/$defs/date" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "generated_at": { "$ref": "#/$defs/timestamp" },
+    "banks": { "type": "array", "items": { "$ref": "#/$defs/bank" } },
+    "offers": { "type": "array", "items": { "$ref": "#/$defs/offer" } }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "timestamp": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$" },
+    "decimal": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "yes_no_unknown": { "enum": ["yes", "no", "unknown"] },
+    "bank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bank_id", "name", "bfg_covered"],
+      "properties": {
+        "bank_id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string", "minLength": 1 },
+        "bfg_covered": { "$ref": "#/$defs/yes_no_unknown" }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offer_id", "bank_id", "product_name", "verification", "term", "interest_type",
+        "day_count_rule", "rounding", "valid_from", "conditions", "early_termination",
+        "availability_rule", "source_url", "retrieved_at", "last_verified_at", "completeness"
+      ],
+      "properties": {
+        "offer_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*/[a-z0-9]+(-[a-z0-9]+)*$" },
+        "bank_id": { "$ref": "#/$defs/slug" },
+        "product_name": { "type": "string", "minLength": 1 },
+        "verification": { "enum": ["verified", "expired"] },
+        "term": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "unit"],
+          "properties": {
+            "value": { "type": "integer", "minimum": 1 },
+            "unit": { "enum": ["days", "months"] }
+          }
+        },
+        "interest_type": { "enum": ["at_maturity", "capitalized", "progressive", "paid_out", "other", "unknown"] },
+        "rate_annual": { "$ref": "#/$defs/decimal" },
+        "rate_schedule": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from_day", "rate_annual"],
+            "properties": {
+              "from_day": { "type": "integer", "minimum": 0 },
+              "rate_annual": { "$ref": "#/$defs/decimal" }
+            }
+          }
+        },
+        "capitalization_period": { "enum": ["monthly", "quarterly", "yearly", "at_end"] },
+        "day_count_rule": { "enum": ["actual_365", "actual_actual", "unknown"] },
+        "rounding": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source", "mode"],
+          "properties": {
+            "source": { "enum": ["bank", "default"] },
+            "mode": { "enum": ["half_up", "half_even", "down", "unknown"] }
+          }
+        },
+        "amount_min": { "$ref": "#/$defs/decimal" },
+        "amount_max": { "$ref": "#/$defs/decimal" },
+        "valid_from": { "$ref": "#/$defs/date" },
+        "valid_until": { "$ref": "#/$defs/date" },
+        "conditions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["new_customer_only", "new_funds_only", "account_required", "one_time_only"],
+          "properties": {
+            "new_customer_only": { "$ref": "#/$defs/yes_no_unknown" },
+            "new_funds_only": { "$ref": "#/$defs/yes_no_unknown" },
+            "account_required": { "$ref": "#/$defs/yes_no_unknown" },
+            "one_time_only": { "$ref": "#/$defs/yes_no_unknown" },
+            "notes": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "early_termination": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["allowed", "interest_treatment"],
+          "properties": {
+            "allowed": { "$ref": "#/$defs/yes_no_unknown" },
+            "interest_treatment": { "enum": ["lose_all", "proportional", "bank_specific", "unknown"] },
+            "fee": { "$ref": "#/$defs/decimal" }
+          }
+        },
+        "availability_rule": { "enum": ["same_day", "next_business_day", "bank_term"] },
+        "availability_days": { "type": "integer", "minimum": 0 },
+        "source_url": { "type": "string", "pattern": "^https?://" },
+        "document_version": { "type": "string" },
+        "retrieved_at": { "$ref": "#/$defs/timestamp" },
+        "last_verified_at": { "$ref": "#/$defs/timestamp" },
+        "completeness": { "enum": ["complete", "partial"] },
+        "missing": { "type": "array", "items": { "type": "string" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "interest_type": { "const": "progressive" } }, "required": ["interest_type"] },
+          "then": { "required": ["rate_schedule"] }
+        },
+        {
+          "if": { "properties": { "interest_type": { "enum": ["at_maturity", "capitalized", "paid_out"] } }, "required": ["interest_type"] },
+          "then": { "required": ["rate_annual"] }
+        },
+        {
+          "if": { "properties": { "interest_type": { "const": "capitalized" } }, "required": ["interest_type"] },
+          "then": { "required": ["capitalization_period"] }
+        },
+        {
+          "if": { "properties": { "availability_rule": { "const": "bank_term" } }, "required": ["availability_rule"] },
+          "then": { "required": ["availability_days"] }
+        },
+        {
+          "if": { "properties": { "completeness": { "const": "partial" } }, "required": ["completeness"] },
+          "then": { "required": ["missing"] }
+        }
+      ]
+    }
+  }
+}

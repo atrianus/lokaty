@@ -1,12 +1,14 @@
 # Kontrakt danych: migawka ofert
 
-Tu powstanie schemat JSON migawki ofert (Etap 2). To jedyne miejsce, które łączy backend z aplikacją.
-
-Planowane pola oferty: `offer_id`, `bank_id`, `product_name`, `rate_annual`, `term_days`, `interest_type`, `day_count_rule`, `rounding_rule`, `amount_min`, `amount_max`, `valid_from`, `valid_until`, `conditions`, `early_termination`, `availability_rule`, `bfg_covered`, `source_url`, `retrieved_at`, `last_verified_at`, `document_version`, `status`, `completeness`.
+`offer-snapshot.schema.json` to schemat JSON (wersja `1.0`) migawki ofert: jedyne miejsce, które łączy backend z aplikacją. Opis pól jest w dokumencie „Etap 2: model danych”.
 
 Zasady:
 
-- kwoty i stawki jako tekst dziesiętny, nie liczba zmiennoprzecinkowa,
-- migawka ma numer wersji schematu, datę i sumę kontrolną,
+- kwoty i stawki jako tekst dziesiętny (`"5.00"`), nigdy liczba JSON,
+- pola tak/nie mają wartości `yes`/`no`/`unknown`: brak wiedzy nie wygląda jak „nie”,
+- w migawce są tylko oferty `verified` i `expired`, szkice (`draft`) nie trafiają do niej,
 - opublikowana migawka nie jest zmieniana, poprawka to nowa rewizja,
-- aplikacja zapisuje przy każdej rekomendacji identyfikator użytej migawki.
+- suma kontrolna i podpis są poza plikiem migawki (`snapshots/latest.json` i plik obok migawki),
+- zmiana niełamiąca podnosi wersję pomocniczą (`1.1`), łamiąca główną (`2.0`).
+
+Kontrole, których schemat sam nie wykonuje (powtórzone identyfikatory, oferta wskazująca nieistniejący bank, `offer_id` spoza banku oferty), robi `tools/validate_snapshots.py`.

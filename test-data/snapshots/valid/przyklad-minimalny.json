@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-11-16",
+  "revision": 1,
+  "generated_at": "2026-11-16T06:30:00Z",
+  "banks": [
+    { "bank_id": "bank-testowy", "name": "Bank Testowy", "bfg_covered": "yes" }
+  ],
+  "offers": [
+    {
+      "offer_id": "bank-testowy/lokata-3m",
+      "bank_id": "bank-testowy",
+      "product_name": "Lokata 3-miesięczna",
+      "verification": "verified",
+      "term": { "value": 3, "unit": "months" },
+      "interest_type": "at_maturity",
+      "rate_annual": "5.00",
+      "day_count_rule": "actual_365",
+      "rounding": { "source": "default", "mode": "half_up" },
+      "valid_from": "2026-11-01",
+      "conditions": {
+        "new_customer_only": "unknown",
+        "new_funds_only": "no",
+        "account_required": "yes",
+        "one_time_only": "unknown"
+      },
+      "early_termination": { "allowed": "unknown", "interest_treatment": "unknown" },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/oferta",
+      "retrieved_at": "2026-11-16T06:00:00Z",
+      "last_verified_at": "2026-11-16T06:20:00Z",
+      "completeness": "partial",
+      "missing": ["early_termination"]
+    }
+  ]
+}
