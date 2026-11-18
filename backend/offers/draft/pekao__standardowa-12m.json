@@ -1,0 +1,45 @@
+{
+  "offer_id": "pekao/standardowa-12m",
+  "bank_id": "pekao",
+  "product_name": "Lokata standardowa 12 mies.",
+  "verification": "draft",
+  "term": {
+    "value": 12,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "1.60",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-06",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "no",
+    "account_required": "yes",
+    "one_time_only": "no",
+    "notes": [
+      "Źródło wtórne (analizy.pl), strona banku nie sprawdzona",
+      "Tabela oprocentowania z 06.11.2026",
+      "Automatyczne odnowienie możliwe"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BPEK013_42/lokata-standardowa-oferta-detaliczna",
+  "retrieved_at": "2026-11-18T17:40:00Z",
+  "last_verified_at": "2026-11-18T17:40:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "source_bank_page",
+    "other_terms"
+  ],
+  "amount_min": "1000"
+}

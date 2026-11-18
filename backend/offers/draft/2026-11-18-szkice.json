@@ -1,0 +1,244 @@
+{
+  "note": "SZKICE do weryfikacji przez człowieka; nie są migawką i nie trafiają do aplikacji",
+  "retrieved": "2026-11-18",
+  "offers": [
+    {
+      "offer_id": "mbank/promocyjna-3m-mkonto-intensive",
+      "bank_id": "mbank",
+      "product_name": "Promocyjna lokata na 3 msc (z mKonto Intensive)",
+      "verification": "draft",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "3.40",
+      "day_count_rule": "unknown",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "amount_min": "1000.00",
+      "valid_from": "2026-10-29",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "yes",
+        "account_required": "yes",
+        "one_time_only": "unknown",
+        "notes": [
+          "Pula promocji 2 mld zł, do wyczerpania",
+          "Limit 200 000 zł łącznie na wszystkie lokaty promocyjne",
+          "Nowe środki liczone względem salda z 20.10.2026",
+          "Stawka 3,40% przy mKonto Intensive"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "bank_specific"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/",
+      "retrieved_at": "2026-11-18T14:00:00Z",
+      "last_verified_at": "2026-11-18T14:00:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule",
+        "availability_rule",
+        "rounding",
+        "early_termination.fee",
+        "jak liczona stawka 0,01% przy zerwaniu"
+      ],
+      "amount_max": "200000.00",
+      "valid_until": "2026-12-08"
+    },
+    {
+      "offer_id": "mbank/promocyjna-3m-inne-konto",
+      "bank_id": "mbank",
+      "product_name": "Promocyjna lokata na 3 msc (z innym kontem)",
+      "verification": "draft",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "3.00",
+      "day_count_rule": "unknown",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "amount_min": "1000.00",
+      "valid_from": "2026-10-29",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "yes",
+        "account_required": "yes",
+        "one_time_only": "unknown",
+        "notes": [
+          "Pula promocji 2 mld zł, do wyczerpania",
+          "Limit 200 000 zł łącznie na wszystkie lokaty promocyjne",
+          "Nowe środki liczone względem salda z 20.10.2026",
+          "Stawka 3,00% przy innym koncie osobistym, np. eKonto"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "bank_specific"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/",
+      "retrieved_at": "2026-11-18T14:00:00Z",
+      "last_verified_at": "2026-11-18T14:00:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule",
+        "availability_rule",
+        "rounding",
+        "jak liczona stawka 0,01% przy zerwaniu"
+      ],
+      "amount_max": "200000.00",
+      "valid_until": "2026-12-08"
+    },
+    {
+      "offer_id": "pko-bp/nowe-srodki-3m",
+      "bank_id": "pko-bp",
+      "product_name": "Lokata na nowe środki 3 msc",
+      "verification": "draft",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "3.30",
+      "day_count_rule": "unknown",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "amount_min": "1000.00",
+      "valid_from": "2026-11-15",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "yes",
+        "account_required": "yes",
+        "one_time_only": "no",
+        "notes": [
+          "Do 3 lokat jednocześnie",
+          "Brak dopłat i częściowych wypłat",
+          "Nowe środki względem dnia odniesienia 12.11.2026",
+          "Limit nowych środków"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow",
+      "retrieved_at": "2026-11-18T14:00:00Z",
+      "last_verified_at": "2026-11-18T14:00:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule",
+        "availability_rule",
+        "rounding",
+        "wyrównanie z regulaminem"
+      ],
+      "amount_max": "250000.00",
+      "valid_until": "2026-12-14"
+    },
+    {
+      "offer_id": "pko-bp/nowe-srodki-6m",
+      "bank_id": "pko-bp",
+      "product_name": "Lokata na nowe środki 6 msc",
+      "verification": "draft",
+      "term": {
+        "value": 6,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "3.40",
+      "day_count_rule": "unknown",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "amount_min": "1000.00",
+      "valid_from": "2026-11-15",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "yes",
+        "account_required": "yes",
+        "one_time_only": "no",
+        "notes": [
+          "Do 3 lokat jednocześnie",
+          "Brak dopłat i częściowych wypłat",
+          "Nowe środki względem dnia odniesienia 12.11.2026",
+          "Limit nowych środków"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow",
+      "retrieved_at": "2026-11-18T14:00:00Z",
+      "last_verified_at": "2026-11-18T14:00:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule",
+        "availability_rule",
+        "rounding",
+        "wyrównanie z regulaminem"
+      ],
+      "amount_max": "250000.00",
+      "valid_until": "2026-12-14"
+    },
+    {
+      "offer_id": "pekao/standardowa-12m",
+      "bank_id": "pekao",
+      "product_name": "Lokata standardowa, oferta detaliczna",
+      "verification": "draft",
+      "term": {
+        "value": 12,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "1.60",
+      "day_count_rule": "unknown",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "amount_min": "1000.00",
+      "valid_from": "2026-11-06",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "no",
+        "account_required": "yes",
+        "one_time_only": "no",
+        "notes": [
+          "Możliwe automatyczne odnowienie",
+          "Data od tabeli oprocentowania z 06.11.2026"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BPEK013_42/lokata-standardowa-oferta-detaliczna",
+      "retrieved_at": "2026-11-18T14:00:00Z",
+      "last_verified_at": "2026-11-18T14:00:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule",
+        "availability_rule",
+        "rounding",
+        "valid_until",
+        "strona banku (źródło: agregator analizy.pl)"
+      ]
+    }
+  ]
+}

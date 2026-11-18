@@ -1,0 +1,47 @@
+{
+  "offer_id": "mbank/promo-3m-standard",
+  "bank_id": "mbank",
+  "product_name": "Promocyjna lokata 3 mies. (bez mKonta Intensive)",
+  "verification": "draft",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "3.00",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-10-29",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "yes",
+    "account_required": "yes",
+    "one_time_only": "unknown",
+    "notes": [
+      "Wymagane nowe środki względem stanu z 20.10.2026",
+      "Zerwanie: oprocentowanie 0,01% zamiast promocyjnego",
+      "Limit łączny lokat promocyjnych 200 000 zł",
+      "Pula promocji 2 mld zł, możliwe wcześniejsze wyczerpanie"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "bank_specific"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/",
+  "retrieved_at": "2026-11-18T17:40:00Z",
+  "last_verified_at": "2026-11-18T17:40:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "regulamin_promocji"
+  ],
+  "valid_until": "2026-12-08",
+  "amount_min": "1000",
+  "amount_max": "200000"
+}
