@@ -1,0 +1,14 @@
+{
+  "banks": [
+    { "bank_id": "pko-bp", "name": "PKO Bank Polski", "bfg_covered": "yes" },
+    { "bank_id": "pekao", "name": "Bank Pekao S.A.", "bfg_covered": "yes" },
+    { "bank_id": "erste-bank-polska", "name": "Erste Bank Polska (dawniej Santander Bank Polska)", "bfg_covered": "yes" },
+    { "bank_id": "ing-bsk", "name": "ING Bank Śląski", "bfg_covered": "yes" },
+    { "bank_id": "mbank", "name": "mBank", "bfg_covered": "yes" },
+    { "bank_id": "bnp-paribas", "name": "BNP Paribas Bank Polska", "bfg_covered": "yes" },
+    { "bank_id": "millennium", "name": "Bank Millennium", "bfg_covered": "yes" },
+    { "bank_id": "alior", "name": "Alior Bank", "bfg_covered": "yes" },
+    { "bank_id": "citi-handlowy", "name": "Bank Handlowy w Warszawie (Citi Handlowy)", "bfg_covered": "yes" },
+    { "bank_id": "velobank", "name": "VeloBank", "bfg_covered": "yes" }
+  ]
+}
