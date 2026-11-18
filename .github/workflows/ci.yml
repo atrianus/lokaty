@@ -16,3 +16,21 @@ jobs:
             test -d "$d" || { echo "Brak katalogu: $d"; exit 1; }
           done
           echo "Struktura repozytorium jest poprawna"
+
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Zainstaluj walidator schematu
+        run: pip install jsonschema
+
+      - name: Testy schematu migawki ofert
+        run: python -m unittest discover -s tools -v
+
+      - name: Walidacja przykładowych i opublikowanych migawek
+        run: python tools/validate_snapshots.py
