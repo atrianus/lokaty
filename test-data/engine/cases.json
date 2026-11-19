@@ -1,0 +1,419 @@
+{
+  "note": "Obliczenie referencyjne (Decimal), nie porównanie z kalkulatorem banku. Generowane przez tools/generate_engine_cases.py",
+  "cases": [
+    {
+      "id": "K1",
+      "description": "at_maturity, 3 mies., actual_365",
+      "rule_status": "założenie (daty i liczba dni)",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day"
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "maturity_date": "2027-02-16",
+        "available_date": "2027-02-17",
+        "days": 92,
+        "interest_gross": "126.03",
+        "tax": "23.95",
+        "interest_net": "102.08",
+        "payout": "10102.08",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K2a",
+      "description": "at_maturity, 12 mies. przez rok przestępny, actual_365",
+      "rule_status": "założenie (daty)",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 12,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day"
+        },
+        "amount": "10000.00",
+        "start_date": "2027-03-01",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "maturity_date": "2028-03-01",
+        "days": 366,
+        "interest_gross": "501.37",
+        "tax": "95.27",
+        "interest_net": "406.10",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K2b",
+      "description": "at_maturity, 12 mies. przez rok przestępny, actual_actual",
+      "rule_status": "założenie",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 12,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_actual",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day"
+        },
+        "amount": "10000.00",
+        "start_date": "2027-03-01",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "maturity_date": "2028-03-01",
+        "days": 366,
+        "interest_gross": "501.15",
+        "tax": "95.22",
+        "interest_net": "405.93",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K3",
+      "description": "zaokrąglenie podatku w górę do grosza",
+      "rule_status": "art. 63 §1a Ordynacji, do potwierdzenia",
+      "input": {
+        "tax_of_interest": [
+          "10.01",
+          "0.01",
+          "100.00"
+        ]
+      },
+      "expected": {
+        "results": [
+          {
+            "interest": "10.01",
+            "tax": "1.91",
+            "net": "8.10"
+          },
+          {
+            "interest": "0.01",
+            "tax": "0.01",
+            "net": "0.00"
+          },
+          {
+            "interest": "100.00",
+            "tax": "19.00",
+            "net": "81.00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K4a",
+      "description": "capitalized monthly, 6%, 3 mies., podatek przy każdej kapitalizacji",
+      "rule_status": "moment podatku do decyzji",
+      "input": {
+        "offer": {
+          "interest_type": "capitalized",
+          "rate_annual": "6.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "capitalization_period": "monthly",
+          "tax_timing": "each_capitalization"
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "interest_gross": "151.85",
+        "tax": "28.88",
+        "interest_net": "122.97",
+        "payout": "10122.97",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K4b",
+      "description": "capitalized monthly, 6%, 3 mies., podatek na końcu",
+      "rule_status": "moment podatku do decyzji",
+      "input": {
+        "offer": {
+          "interest_type": "capitalized",
+          "rate_annual": "6.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "capitalization_period": "monthly",
+          "tax_timing": "at_end"
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "interest_gross": "152.00",
+        "tax": "28.88",
+        "interest_net": "123.12",
+        "payout": "10123.12",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K5",
+      "description": "zerwanie proportional po 40 dniach",
+      "rule_status": "przybliżony",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "early_termination": {
+            "allowed": "yes",
+            "interest_treatment": "proportional"
+          }
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": {
+          "break_on": "2026-12-26"
+        }
+      },
+      "expected": {
+        "days": 40,
+        "interest_gross": "54.79",
+        "tax": "10.42",
+        "interest_net": "44.37",
+        "payout": "10044.37",
+        "confidence": "approximate"
+      }
+    },
+    {
+      "id": "K6",
+      "description": "zerwanie lose_all",
+      "rule_status": "dokładny",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "early_termination": {
+            "allowed": "yes",
+            "interest_treatment": "lose_all"
+          }
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": {
+          "break_on": "2026-12-26"
+        }
+      },
+      "expected": {
+        "interest_gross": "0.00",
+        "tax": "0.00",
+        "interest_net": "0.00",
+        "payout": "10000.00",
+        "confidence": "exact"
+      }
+    },
+    {
+      "id": "K7",
+      "description": "zerwanie unknown: dwa wyniki",
+      "rule_status": "niezweryfikowany",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "early_termination": {
+            "allowed": "yes",
+            "interest_treatment": "unknown"
+          }
+        },
+        "amount": "10000.00",
+        "start_date": "2026-11-16",
+        "scenario": {
+          "break_on": "2026-12-26"
+        }
+      },
+      "expected": {
+        "conservative": {
+          "payout": "10000.00"
+        },
+        "optimistic": {
+          "payout": "10044.37"
+        },
+        "labels": [
+          "early_termination_unknown"
+        ],
+        "confidence": "unverified"
+      }
+    },
+    {
+      "id": "K8",
+      "description": "następny dzień roboczy",
+      "rule_status": "lista świąt ze źródła",
+      "input": {
+        "maturity_dates": [
+          "2027-02-19",
+          "2026-12-23",
+          "2027-03-26"
+        ]
+      },
+      "expected": {
+        "available_dates": [
+          "2027-02-22",
+          "2026-12-28",
+          "2027-03-30"
+        ]
+      }
+    },
+    {
+      "id": "K9",
+      "description": "koniec lokaty w miesiącach",
+      "rule_status": "założenie",
+      "input": {
+        "cases": [
+          {
+            "start": "2027-01-31",
+            "months": 1
+          },
+          {
+            "start": "2026-11-30",
+            "months": 3
+          },
+          {
+            "start": "2027-08-31",
+            "months": 6
+          }
+        ]
+      },
+      "expected": {
+        "maturity_dates": [
+          "2027-02-28",
+          "2027-02-28",
+          "2028-02-29"
+        ]
+      }
+    },
+    {
+      "id": "K10",
+      "description": "Wielkanoc i Boże Ciało",
+      "rule_status": "algorytm",
+      "input": {
+        "years": [
+          2026,
+          2027,
+          2028
+        ]
+      },
+      "expected": {
+        "easter": [
+          "2026-04-05",
+          "2027-03-28",
+          "2028-04-16"
+        ],
+        "corpus_christi": [
+          "2026-06-04",
+          "2027-05-27",
+          "2028-06-15"
+        ]
+      }
+    },
+    {
+      "id": "K11",
+      "description": "kwota poza przedziałem oferty",
+      "rule_status": "dokładny",
+      "input": {
+        "offer": {
+          "interest_type": "at_maturity",
+          "rate_annual": "5.00",
+          "term": {
+            "value": 3,
+            "unit": "months"
+          },
+          "day_count_rule": "actual_365",
+          "rounding": {
+            "source": "default",
+            "mode": "half_up"
+          },
+          "availability_rule": "next_business_day",
+          "amount_min": "1000.00"
+        },
+        "amount": "500.00",
+        "start_date": "2026-11-16",
+        "scenario": "maturity"
+      },
+      "expected": {
+        "errors": [
+          "amount_below_min"
+        ],
+        "result": null
+      }
+    }
+  ]
+}
