@@ -67,6 +67,8 @@
           }
         },
         "capitalization_period": { "enum": ["monthly", "quarterly", "yearly", "at_end"] },
+        "tax_timing": { "enum": ["each_capitalization", "at_end", "unknown"] },
+        "payout_period": { "enum": ["monthly", "quarterly", "yearly", "at_end"] },
         "day_count_rule": { "enum": ["actual_365", "actual_actual", "unknown"] },
         "rounding": {
           "type": "object",
@@ -124,6 +126,10 @@
         {
           "if": { "properties": { "interest_type": { "const": "capitalized" } }, "required": ["interest_type"] },
           "then": { "required": ["capitalization_period"] }
+        },
+        {
+          "if": { "properties": { "interest_type": { "const": "paid_out" } }, "required": ["interest_type"] },
+          "then": { "required": ["payout_period"] }
         },
         {
           "if": { "properties": { "availability_rule": { "const": "bank_term" } }, "required": ["availability_rule"] },
