@@ -1,15 +1,9 @@
-# Silnik obliczeń (Kotlin JVM)
+# Silnik finansowy
 
-Moduł bez zależności od Androida, testowalny samodzielnie.
+Kotlin (JVM), czysta funkcja: bez zegara, sieci i plików (poza testami). Reguły: dokument „Specyfikacja silnika finansowego”.
 
-Planowane pakiety: `model`, `calendar` (dni robocze i święta), `finance` (odsetki, podatek, zaokrąglenia, zerwanie), `optimizer` (kombinacje strategii).
+- `src/main/kotlin/pl/lokaty/engine/Calendar.kt`: dodawanie miesięcy, Wielkanoc, święta, dni robocze.
+- `src/test/kotlin/...`: testy czytają przypadki z `../test-data/engine/cases.json`.
+- `./build-and-test.sh`: kompiluje i uruchamia testy kompilatorem Kotlina dołączonym do Gradle (bez pobierania bibliotek). Uruchamia to też CI (zadanie `engine`).
 
-Zasady:
-
-- wszystkie kwoty i stawki na `BigDecimal`, typ zmiennoprzecinkowy jest zabroniony,
-- silnik nie ma sieci, plików ani zegara systemowego: data obliczenia jest parametrem,
-- każdy wynik ma poziom pewności (dokładny, przybliżony, niezweryfikowany) i ślad obliczeń,
-- brak znanej reguły nie jest zastępowany przypuszczeniem,
-- `finance` i `calendar` są odbierane osobno od `optimizer` (etapy 5 i 6).
-
-Implementacja zaczyna się dopiero po Etapie 2 i specyfikacji silnika finansowego.
+Dalsze kroki: odsetki i podatek (K1–K5), zerwanie (K5–K7), walidacja (K11).
