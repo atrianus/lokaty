@@ -50,4 +50,4 @@ jobs:
           gradle-version: "8.14.3"
 
       - name: Kompilacja i testy silnika
-run: bash engine/build-and-test.sh
+        run: bash engine/build-and-test.sh
