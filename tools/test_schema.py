@@ -41,8 +41,22 @@ class ValidCases(unittest.TestCase):
             o.update(interest_type="progressive", rate_schedule=[{"from_day": 0, "rate_annual": "4.00"}])
         self.assertEqual(validate(variant(m)), [])
 
+    def test_kapitalizacja_z_momentem_podatku_przechodzi(self):
+        def m(s):
+            offer(s).update(interest_type="capitalized", capitalization_period="monthly", tax_timing="at_end")
+        self.assertEqual(validate(variant(m)), [])
+
+    def test_wyplata_odsetek_z_okresem_przechodzi(self):
+        self.assertEqual(validate(variant(lambda s: offer(s).update(interest_type="paid_out", payout_period="monthly"))), [])
+
 
 class InvalidCases(unittest.TestCase):
+    def test_wyplata_odsetek_bez_okresu(self):
+        self.assert_rejected(lambda s: offer(s).update(interest_type="paid_out"))
+
+    def test_nieznany_moment_podatku(self):
+        self.assert_rejected(lambda s: offer(s).update(tax_timing="sometimes"))
+
     def assert_rejected(self, mutate):
         self.assertNotEqual(validate(variant(mutate)), [])
 
