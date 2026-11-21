@@ -1,0 +1,1358 @@
+{
+ "note": "Obliczenie referencyjne (pełne przeszukanie bez przycinania), nie porównanie z bankiem. Generowane przez tools/generate_optimizer_cases.py",
+ "cases": [
+  {
+   "id": "O1",
+   "description": "dwie lokaty 3-miesięczne kontra jedna 6-miesięczna",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     },
+     {
+      "id": "bank-a/a-6m",
+      "bank_id": "bank-a",
+      "term_months": 6,
+      "rate": "5.20",
+      "valid_from": "2026-11-01"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10208.86",
+      "available_date": "2027-05-17"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10201.83",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m",
+       "bank-a/a-6m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-05-17"
+      ],
+      "final_value": "10425.62",
+      "available_date": "2027-11-18",
+      "extra_days": 141,
+      "extra_profit": "216.76"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-6m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10418.44",
+      "available_date": "2027-11-19",
+      "extra_days": 142,
+      "extra_profit": "209.58"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-6m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10313.08",
+      "available_date": "2027-08-18",
+      "extra_days": 49,
+      "extra_profit": "104.22"
+     },
+     {
+      "legs": [
+       "bank-a/a-6m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-05-17"
+      ],
+      "final_value": "10313.07",
+      "available_date": "2027-08-18",
+      "extra_days": 49,
+      "extra_profit": "104.21"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m"
+      ],
+      "final_value": "10208.86"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10201.83"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m",
+       "bank-a/a-6m"
+      ],
+      "final_value": "10425.62"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-6m"
+      ],
+      "final_value": "10418.44"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-6m"
+      ],
+      "final_value": "10313.08"
+     },
+     {
+      "legs": [
+       "bank-a/a-6m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10313.07"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10305.97"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O2",
+   "description": "A+B lepsza niż A+A, gdy B ma wyższą stawkę i zaczyna ważność w dniu dostępności",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     },
+     {
+      "id": "bank-b/b-3m",
+      "bank_id": "bank-b",
+      "term_months": 3,
+      "rate": "5.50",
+      "valid_from": "2027-02-17"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10211.81",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10201.83",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.48",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "114.67"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10316.38",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.57"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10316.05",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.24"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10305.97",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "94.16"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10211.81"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10201.83"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10326.48"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10316.38"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10316.05"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10305.97"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O3",
+   "description": "oferta ważna w dniu startu, ale nie w dniu założenia drugiej nogi: tylko pierwsza noga",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-d/d-3m",
+      "bank_id": "bank-d",
+      "term_months": 3,
+      "rate": "6.00",
+      "valid_from": "2026-11-01",
+      "valid_until": "2026-11-30"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-d/d-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10122.49",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-d/d-3m"
+      ],
+      "final_value": "10122.49"
+     }
+    ],
+    "all_over_horizon": []
+   }
+  },
+  {
+   "id": "O4",
+   "description": "żadna oferta nie jest ważna w dniu drugiej nogi: tylko strategie jednonożne",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01",
+      "valid_until": "2026-12-31"
+     },
+     {
+      "id": "bank-a/a-6m",
+      "bank_id": "bank-a",
+      "term_months": 6,
+      "rate": "5.20",
+      "valid_from": "2026-11-01",
+      "valid_until": "2026-12-31"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-12-31",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10208.86",
+      "available_date": "2027-05-17"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-6m"
+      ],
+      "final_value": "10208.86"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": []
+   }
+  },
+  {
+   "id": "O5",
+   "description": "luka 7 dni dopuszczona (E), luka 8 dni odrzucona (F)",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-e/e-3m",
+      "bank_id": "bank-e",
+      "term_months": 3,
+      "rate": "5.50",
+      "valid_from": "2027-02-24"
+     },
+     {
+      "id": "bank-f/f-3m",
+      "bank_id": "bank-f",
+      "term_months": 3,
+      "rate": "5.50",
+      "valid_from": "2027-02-25"
+     },
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01",
+      "valid_until": "2026-12-31"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-24"
+      ],
+      "final_value": "10211.81",
+      "available_date": "2027-05-25"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m",
+       "bank-e/e-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-24",
+       "2027-05-25"
+      ],
+      "final_value": "10326.48",
+      "available_date": "2027-08-26",
+      "extra_days": 57,
+      "extra_profit": "114.67"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m",
+       "bank-f/f-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-24",
+       "2027-05-25"
+      ],
+      "final_value": "10326.48",
+      "available_date": "2027-08-26",
+      "extra_days": 57,
+      "extra_profit": "114.67"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m"
+      ],
+      "final_value": "10211.81"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m",
+       "bank-e/e-3m"
+      ],
+      "final_value": "10326.48"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-e/e-3m",
+       "bank-f/f-3m"
+      ],
+      "final_value": "10326.48"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O6",
+   "description": "strategia przekraczająca horyzont z dodatkowymi dniami i zyskiem",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-03-31",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10201.83",
+      "available_date": "2027-05-18",
+      "extra_days": 48,
+      "extra_profit": "99.75"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10201.83"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O9",
+   "description": "zawarta noga zostaje bez przeliczenia, kontynuacja liczona od jej dostępności",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "6.00",
+      "valid_from": "2026-11-01"
+     },
+     {
+      "id": "bank-b/b-3m",
+      "bank_id": "bank-b",
+      "term_months": 3,
+      "rate": "5.50",
+      "valid_from": "2026-11-01"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": [
+     {
+      "offer_id": "bank-a/a-3m",
+      "start": "2026-11-16",
+      "amount": "10000.00",
+      "payout": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ]
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10221.78",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10211.81",
+      "available_date": "2027-05-18"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10346.99",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "125.21"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10336.90",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "115.12"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10336.55",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "114.77"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-b/b-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.48",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.70"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10221.78"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10211.81"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10346.99"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10336.90"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10336.55"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-b/b-3m",
+       "bank-b/b-3m"
+      ],
+      "final_value": "10326.48"
+     }
+    ]
+   },
+   "note": "Zawarta noga ma stawkę 5,00% (wypłata 10102.08), mimo że oferta a-3m ma teraz 6,00%."
+  },
+  {
+   "id": "O10",
+   "description": "oferta jednorazowa nie wchodzi dwa razy",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-g/g-3m",
+      "bank_id": "bank-g",
+      "term_months": 3,
+      "rate": "6.00",
+      "valid_from": "2026-11-01",
+      "one_time_only": "yes"
+     },
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-g/g-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10222.45",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-g/g-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10221.78",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10201.83",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-g/g-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10122.49",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-g/g-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.80",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.35"
+     },
+     {
+      "legs": [
+       "bank-g/g-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.80",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.35"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-g/g-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.12",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "103.67"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10305.97",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "83.52"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-g/g-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10222.45"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-g/g-3m"
+      ],
+      "final_value": "10221.78"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10201.83"
+     },
+     {
+      "legs": [
+       "bank-g/g-3m"
+      ],
+      "final_value": "10122.49"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-g/g-3m"
+      ],
+      "final_value": "10326.80"
+     },
+     {
+      "legs": [
+       "bank-g/g-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10326.80"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-g/g-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10326.12"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10305.97"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O11",
+   "description": "kwota poza przedziałem oferty odrzuca ofertę dla nogi, nie całą strategię",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-h/h-3m",
+      "bank_id": "bank-h",
+      "term_months": 3,
+      "rate": "6.00",
+      "valid_from": "2026-11-01",
+      "amount_max": "10050.00"
+     },
+     {
+      "id": "bank-a/a-3m",
+      "bank_id": "bank-a",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     },
+     {
+      "id": "bank-i/i-3m",
+      "bank_id": "bank-i",
+      "term_months": 3,
+      "rate": "7.00",
+      "valid_from": "2026-11-01",
+      "amount_min": "20000.00"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-06-30",
+    "limits": {
+     "max_legs": 3,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-h/h-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10222.45",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17"
+      ],
+      "final_value": "10201.83",
+      "available_date": "2027-05-18"
+     },
+     {
+      "legs": [
+       "bank-h/h-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10122.49",
+      "available_date": "2027-02-17"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [
+     {
+      "legs": [
+       "bank-h/h-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10326.80",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "104.35"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "starts": [
+       "2026-11-16",
+       "2027-02-17",
+       "2027-05-18"
+      ],
+      "final_value": "10305.97",
+      "available_date": "2027-08-19",
+      "extra_days": 50,
+      "extra_profit": "83.52"
+     }
+    ],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-h/h-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10222.45"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10201.83"
+     },
+     {
+      "legs": [
+       "bank-h/h-3m"
+      ],
+      "final_value": "10122.49"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": [
+     {
+      "legs": [
+       "bank-h/h-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10326.80"
+     },
+     {
+      "legs": [
+       "bank-a/a-3m",
+       "bank-a/a-3m",
+       "bank-a/a-3m"
+      ],
+      "final_value": "10305.97"
+     }
+    ]
+   }
+  },
+  {
+   "id": "O12",
+   "description": "remis: identyczne oferty, kolejność deterministyczna",
+   "input": {
+    "offers": [
+     {
+      "id": "bank-x/x-3m",
+      "bank_id": "bank-x",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     },
+     {
+      "id": "bank-y/y-3m",
+      "bank_id": "bank-y",
+      "term_months": 3,
+      "rate": "5.00",
+      "valid_from": "2026-11-01"
+     }
+    ],
+    "capital": "10000.00",
+    "start": "2026-11-16",
+    "horizon_end": "2027-02-28",
+    "limits": {
+     "max_legs": 1,
+     "max_gap_days": 7,
+     "max_shown": 4
+    },
+    "rejected": [],
+    "locked": []
+   },
+   "expected": {
+    "in_horizon": [
+     {
+      "legs": [
+       "bank-x/x-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     },
+     {
+      "legs": [
+       "bank-y/y-3m"
+      ],
+      "starts": [
+       "2026-11-16"
+      ],
+      "final_value": "10102.08",
+      "available_date": "2027-02-17"
+     }
+    ],
+    "over_horizon": [],
+    "all_in_horizon": [
+     {
+      "legs": [
+       "bank-x/x-3m"
+      ],
+      "final_value": "10102.08"
+     },
+     {
+      "legs": [
+       "bank-y/y-3m"
+      ],
+      "final_value": "10102.08"
+     }
+    ],
+    "all_over_horizon": []
+   }
+  }
+ ]
+}
