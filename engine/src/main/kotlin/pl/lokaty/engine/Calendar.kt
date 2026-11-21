@@ -30,7 +30,11 @@ object Calendar {
     fun corpusChristi(year: Int): LocalDate = easter(year).plusDays(60)
 
     /** Dni ustawowo wolne w danym roku; Wigilia od 2025 (nowelizacja z 2024). */
-    fun holidays(year: Int): Set<LocalDate> {
+    private val holidayCache = java.util.concurrent.ConcurrentHashMap<Int, Set<LocalDate>>()
+
+    fun holidays(year: Int): Set<LocalDate> = holidayCache.getOrPut(year) { computeHolidays(year) }
+
+    private fun computeHolidays(year: Int): Set<LocalDate> {
         val fixed = mutableListOf(1 to 1, 1 to 6, 5 to 1, 5 to 3, 8 to 15, 11 to 1, 11 to 11, 12 to 25, 12 to 26)
         if (year >= 2025) fixed += 12 to 24
         val easter = easter(year)

@@ -29,3 +29,7 @@ for T in CalendarTestKt InterestTestKt; do
   echo "== $T"
   java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" "pl.lokaty.engine.$T" ../test-data/engine/cases.json
 done
+echo "== OptimizerTestKt"
+java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.OptimizerTestKt ../test-data/engine/optimizer-cases.json
+echo "== PerfTestKt"
+java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.PerfTestKt
