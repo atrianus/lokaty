@@ -25,4 +25,7 @@ OUT="$(mktemp -d)"
 trap 'rm -rf "$OUT"' EXIT
 java -cp "$CP" org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -no-stdlib -cp "$STDLIB" \
   $(find src -name '*.kt') -d "$OUT"
-java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.CalendarTestKt ../test-data/engine/cases.json
+for T in CalendarTestKt InterestTestKt; do
+  echo "== $T"
+  java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" "pl.lokaty.engine.$T" ../test-data/engine/cases.json
+done
