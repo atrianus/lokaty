@@ -192,7 +192,6 @@ Nowość
 Konto Pro oszczędnościowe Erste Platinum
 Nowość
 Konto Multi oszczędnościowe
-Promocja
 Konto oszczędnościowe Erste Platinum
 Moje cele
 Produkty oszczędnościowe i inwestycyjne
@@ -492,7 +491,6 @@ Nowość
 Konto Pro oszczędnościowe Erste Platinum
 Nowość
 Konto Multi oszczędnościowe
-Promocja
 Konto oszczędnościowe Erste Platinum
 Moje cele
 Produkty oszczędnościowe i inwestycyjne
@@ -679,9 +677,8 @@ Polecamy
 Rachunek maklerski Standard
 Inwestuj w dowolnym miejscu i czasie na giełdzie polskiej oraz wybranych rynkach zagranicznych
 Więcej
-Promocja
 Konto Multi oszczędnościowe
-Zyskaj 4,5% dla nowych środków do 200 tys. zł na Koncie Multi oszczędnościowym (oprocentowanie promocyjne w skali roku).
+Oszczędzaj i korzystaj z pieniędzy bez utraty odsetek
 Więcej
 Moje cele
 Odkładaj pieniądze na marzenia w aplikacji Erste. Sprawdź jakie to łatwe
