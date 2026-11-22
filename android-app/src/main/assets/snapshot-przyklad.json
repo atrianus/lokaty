@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-11-21",
+  "revision": 1,
+  "generated_at": "2026-11-21T06:30:00Z",
+  "banks": [
+    {
+      "bank_id": "bank-alfa",
+      "name": "Bank Alfa (dane przykładowe)",
+      "bfg_covered": "yes"
+    },
+    {
+      "bank_id": "bank-beta",
+      "name": "Bank Beta (dane przykładowe)",
+      "bfg_covered": "yes"
+    },
+    {
+      "bank_id": "bank-gamma",
+      "name": "Bank Gamma (dane przykładowe)",
+      "bfg_covered": "yes"
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "bank-alfa/lokata-3m",
+      "bank_id": "bank-alfa",
+      "product_name": "Lokata 3 mies.",
+      "verification": "verified",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "4.50",
+      "day_count_rule": "actual_365",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "valid_from": "2026-11-01",
+      "valid_until": "2027-12-31",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "no",
+        "account_required": "no",
+        "one_time_only": "no",
+        "notes": [
+          "Dane przykładowe, wymyślone do testów aplikacji"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/dane-przykladowe",
+      "retrieved_at": "2026-11-21T06:00:00Z",
+      "last_verified_at": "2026-11-21T06:10:00Z",
+      "completeness": "complete"
+    },
+    {
+      "offer_id": "bank-alfa/lokata-6m",
+      "bank_id": "bank-alfa",
+      "product_name": "Lokata 6 mies.",
+      "verification": "verified",
+      "term": {
+        "value": 6,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "4.70",
+      "day_count_rule": "actual_365",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "valid_from": "2026-11-01",
+      "valid_until": "2027-12-31",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "no",
+        "account_required": "no",
+        "one_time_only": "no",
+        "notes": [
+          "Dane przykładowe, wymyślone do testów aplikacji"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/dane-przykladowe",
+      "retrieved_at": "2026-11-21T06:00:00Z",
+      "last_verified_at": "2026-11-21T06:10:00Z",
+      "completeness": "complete"
+    },
+    {
+      "offer_id": "bank-beta/nowe-srodki-3m",
+      "bank_id": "bank-beta",
+      "product_name": "Lokata na nowe środki 3 mies.",
+      "verification": "verified",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "5.20",
+      "day_count_rule": "actual_365",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "valid_from": "2026-11-01",
+      "valid_until": "2027-06-30",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "yes",
+        "account_required": "yes",
+        "one_time_only": "no",
+        "notes": [
+          "Dane przykładowe, wymyślone do testów aplikacji"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/dane-przykladowe",
+      "retrieved_at": "2026-11-21T06:00:00Z",
+      "last_verified_at": "2026-11-21T06:10:00Z",
+      "completeness": "complete",
+      "amount_min": "1000.00",
+      "amount_max": "200000.00"
+    },
+    {
+      "offer_id": "bank-gamma/promo-3m",
+      "bank_id": "bank-gamma",
+      "product_name": "Promocja 3 mies. dla nowych klientów",
+      "verification": "verified",
+      "term": {
+        "value": 3,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "5.60",
+      "day_count_rule": "actual_365",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "valid_from": "2027-02-01",
+      "valid_until": "2027-06-30",
+      "conditions": {
+        "new_customer_only": "yes",
+        "new_funds_only": "no",
+        "account_required": "yes",
+        "one_time_only": "no",
+        "notes": [
+          "Dane przykładowe, wymyślone do testów aplikacji"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/dane-przykladowe",
+      "retrieved_at": "2026-11-21T06:00:00Z",
+      "last_verified_at": "2026-11-21T06:10:00Z",
+      "completeness": "partial",
+      "missing": [
+        "day_count_rule"
+      ]
+    },
+    {
+      "offer_id": "bank-gamma/lokata-12m",
+      "bank_id": "bank-gamma",
+      "product_name": "Lokata 12 mies.",
+      "verification": "verified",
+      "term": {
+        "value": 12,
+        "unit": "months"
+      },
+      "interest_type": "at_maturity",
+      "rate_annual": "4.30",
+      "day_count_rule": "actual_365",
+      "rounding": {
+        "source": "default",
+        "mode": "half_up"
+      },
+      "valid_from": "2026-11-01",
+      "valid_until": "2027-12-31",
+      "conditions": {
+        "new_customer_only": "no",
+        "new_funds_only": "no",
+        "account_required": "no",
+        "one_time_only": "no",
+        "notes": [
+          "Dane przykładowe, wymyślone do testów aplikacji"
+        ]
+      },
+      "early_termination": {
+        "allowed": "yes",
+        "interest_treatment": "lose_all"
+      },
+      "availability_rule": "next_business_day",
+      "source_url": "https://example.com/dane-przykladowe",
+      "retrieved_at": "2026-11-21T06:00:00Z",
+      "last_verified_at": "2026-11-21T06:10:00Z",
+      "completeness": "complete"
+    }
+  ]
+}

@@ -31,5 +31,7 @@ for T in CalendarTestKt InterestTestKt; do
 done
 echo "== OptimizerTestKt"
 java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.OptimizerTestKt ../test-data/engine/optimizer-cases.json
+echo "== AdvisorTestKt"
+java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.AdvisorTestKt ../test-data/snapshots/valid/przyklad-minimalny.json
 echo "== PerfTestKt"
 java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp "$OUT:$STDLIB" pl.lokaty.engine.PerfTestKt

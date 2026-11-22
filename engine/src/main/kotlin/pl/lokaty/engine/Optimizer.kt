@@ -71,6 +71,7 @@ object Optimizer {
     fun optimize(
         offers: List<OfferRef>, capital: BigDecimal, start: LocalDate, horizonEnd: LocalDate,
         limits: Limits = Limits(), rejected: Set<String> = emptySet(), locked: List<LockedLeg> = emptyList(),
+        isRejected: (Strategy) -> Boolean = { it.fingerprint in rejected },
     ): OptimizerResult {
         val sorted = offers.sortedBy { it.id }
         val all = mutableListOf<Strategy>()
@@ -110,7 +111,7 @@ object Optimizer {
 
         val cmp = compareBy<Strategy>({ it.finalValue.negate() }, { it.availableDate }, { it.legs.size })
             .thenComparator { a, b -> a.offerIds.joinToString("|").compareTo(b.offerIds.joinToString("|")) }
-        val live = all.filter { it.fingerprint !in rejected }.sortedWith(cmp)
+        val live = all.filter { !isRejected(it) }.sortedWith(cmp)
         val ranked = live.filter { it.confidence != Confidence.UNVERIFIED }
         val inH = ranked.filter { !it.overHorizon }
         val best = inH.firstOrNull()?.finalValue
