@@ -36,6 +36,7 @@ class Repository(private val context: Context) {
     suspend fun decision(): DecisionEntity? = dao.decision()
     suspend fun saveDecision(d: DecisionEntity) = dao.saveDecision(d)
     suspend fun rejected(): List<RejectedEntity> = dao.rejected()
+    suspend fun reject(r: RejectedEntity) = dao.reject(r)
 
     /**
      * Na razie migawka przykładowa z zasobów aplikacji (dane wymyślone).
