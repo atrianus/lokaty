@@ -1,7 +1,8 @@
-# Oferty
+# Zweryfikowane oferty
 
-Tu będą pliki z ofertami lokat (jeden plik na ofertę lub bank, format ustali Etap 2).
+Pliki `*.json` w tym folderze (jedna oferta = jeden plik, `verification: "verified"`) trafiają do migawki publikowanej na GitHub Pages
+(`backend/publisher/publish.py`, workflow `publish.yml`). Szkice w `draft/` nie są publikowane.
 
-Statusy oferty: `niezweryfikowana` (szkic ze skryptu), `zweryfikowana` (zatwierdzona przez człowieka), `wygasła`.
-
-Do zweryfikowanej oferty zawsze należy źródło (`source_url`), data pobrania i data ostatniej weryfikacji.
+Zmiana, dodanie lub usunięcie pliku w tym folderze po wgraniu do `main` uruchamia publikację automatycznie.
+Codzienny workflow `collect.yml` sprawdza, czy stawka z oferty nadal jest na stronie banku (`backend/collector/rates-report.md`);
+wpis `missing` oznacza, że trzeba zajrzeć na stronę i poprawić albo usunąć ofertę.
