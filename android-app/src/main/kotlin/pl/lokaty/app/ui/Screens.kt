@@ -103,7 +103,7 @@ fun MainScreen(vm: MainViewModel = viewModel()) {
     val names = remember(state.snapshot) { Names(state.snapshot) }
     Scaffold(
         bottomBar = {
-            NavigationBar {
+            NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
                 NavigationBarItem(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Strategie") },
                     icon = { Icon(painterResource(R.drawable.ic_tab_strategies), contentDescription = null) })
                 NavigationBarItem(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Ustawienia") },
@@ -225,7 +225,7 @@ private fun ConfidenceChip(c: Confidence) {
 @Composable
 private fun DecisionCard(description: String, finalValue: BigDecimal, state: UiState, names: Names, onReset: () -> Unit) {
     var confirm by remember { mutableStateOf(false) }
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer, contentColor = MaterialTheme.colorScheme.onPrimaryContainer)) {
+    Card(Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer, contentColor = MaterialTheme.colorScheme.onPrimaryContainer)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text("Twoja zatwierdzona strategia", style = MaterialTheme.typography.labelLarge)
             Text(money(finalValue), style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
@@ -264,7 +264,7 @@ private fun DecisionCard(description: String, finalValue: BigDecimal, state: UiS
 private fun StrategyCard(s: Strategy, state: UiState, names: Names, vm: MainViewModel) {
     val capital = BigDecimal(state.settings.capital)
     val isApproved = state.decision?.fingerprint == s.fingerprint
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+    Card(Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text("Wartość na końcu", Modifier.weight(1f), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -354,7 +354,7 @@ private fun TimelineRow(title: String, subtitle: String, info: String, tag: Stri
 private fun BreakCard(o: BreakOption, names: Names) {
     val uriHandler = LocalUriHandler.current
     val url = names.offer(o.offerId)?.sourceUrl
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+    Card(Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text("Zerwanie: ${names.bank(o.offerId)}", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
@@ -423,7 +423,7 @@ private fun DataTab(state: UiState, vm: MainViewModel) {
     LazyColumn(Modifier.fillMaxWidth(), contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         item { Text("Dane", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold) }
         item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+            Card(Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text("Oferty lokat", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
                     Text(
@@ -444,7 +444,7 @@ private fun DataTab(state: UiState, vm: MainViewModel) {
             }
         }
         item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+            Card(Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text("Twoje dane", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
                     Text(
