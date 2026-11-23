@@ -21,10 +21,13 @@ jobs:
       - name: Pobierz strony i porównaj z poprzednim dniem
         run: python backend/collector/detect_changes.py
 
+      - name: Sprawdź, czy stawki ofert nadal są na stronach banków
+        run: python backend/collector/check_rates.py
+
       - name: Zapisz zmiany w repozytorium
         run: |
           git config user.name "lokaty-bot"
           git config user.email "lokaty-bot@users.noreply.github.com"
-          git add backend/collector/state backend/collector/report.md
+          git add backend/collector/state backend/collector/report.md backend/collector/rates-report.md
           git diff --cached --quiet || git commit -m "Wykrywacz zmian: raport $(date -u +%F)"
           git push
