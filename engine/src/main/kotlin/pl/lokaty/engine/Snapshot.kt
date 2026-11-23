@@ -60,6 +60,8 @@ object SnapshotParser {
             validUntil = (o["valid_until"] as String?)?.let { LocalDate.parse(it) },
             oneTimeOnly = enumOf(cond["one_time_only"], YesNoUnknown.UNKNOWN),
             labels = labels,
+            title = (o["product_name"] as String?) ?: "",
+            sourceUrl = o["source_url"] as String?,
         )
     }
 }

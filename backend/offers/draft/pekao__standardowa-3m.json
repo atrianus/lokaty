@@ -1,0 +1,46 @@
+{
+  "offer_id": "pekao/standardowa-3m",
+  "bank_id": "pekao",
+  "product_name": "Lokata standardowa 3 mies.",
+  "verification": "draft",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "2.00",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-08-20",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "no",
+    "account_required": "yes",
+    "one_time_only": "no",
+    "notes": [
+      "Źródło wtórne (bankoweabc.pl), strona banku nie sprawdzona",
+      "Data aktualizacji tabeli na stronie: 20.08.2026 (nagłówek: „listopad 2026”, niespójne)",
+      "Zerwanie: wypłata samego kapitału",
+      "Stawka dla lokaty online; w Pekao24/PeoPay zależy od rachunku"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://bankoweabc.pl/oferta/lokata-standardowa-bank-pekao-sa/",
+  "retrieved_at": "2026-11-23T06:30:00Z",
+  "last_verified_at": "2026-11-23T06:30:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "source_bank_page",
+    "other_terms"
+  ],
+  "amount_min": "1000"
+}

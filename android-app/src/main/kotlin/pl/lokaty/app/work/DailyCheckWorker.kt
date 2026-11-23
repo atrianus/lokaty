@@ -21,7 +21,10 @@ class DailyCheckWorker(context: Context, params: WorkerParameters) : CoroutineWo
         val repo = Repository(applicationContext)
         val decision = repo.decision() ?: return Result.success()
         val settings = repo.settings().toSettings()
-        val check = repo.check(repo.loadSnapshot(), decision, settings, repo.rejected())
+        // Świeże oferty (jeśli jest sieć); przy błędzie zostają dane zapisane wcześniej.
+        val snapshot = repo.refreshSnapshot().snapshot
+        val base = repo.base(settings, repo.lockedLegs(), java.time.LocalDate.now())
+        val check = repo.check(snapshot, decision, settings, base, repo.rejected())
         if (check.notify && check.comparison != null) {
             notify("Lepsza strategia: +${money(check.comparison!!.difference)}", "Otwórz aplikację, żeby zobaczyć propozycję.")
             repo.saveDecision(decision.copy(lastNotifiedDifference = check.comparison!!.difference.toPlainString()))

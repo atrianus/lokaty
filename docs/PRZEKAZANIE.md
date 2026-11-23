@@ -53,11 +53,12 @@ Banki startowe (10): PKO BP, Pekao, Erste Bank Polska (dawniej Santander Bank Po
 | --- | --- | --- |
 | 1 | Architektura, szkielet repozytorium, CI | gotowe, zielone |
 | 2 | Model danych, schemat migawki 1.0 z walidatorem i 32 testami | gotowe, zielone |
-| 3 | Pozyskiwanie ofert: `banks.json`, 5 szkiców ofert (PKO, mBank, Pekao) w `backend/offers/draft/`, wykrywacz zmian stron (codzienny workflow `collect.yml`) | krok 1 gotowy; parser stawek, weryfikacja szkiców i publikacja migawki jeszcze nie |
+| 3 | Pozyskiwanie ofert: `banks.json`, wykrywacz zmian stron (`collect.yml`), kontrola stawek (`check_rates.py`, raport `rates-report.md`), 4 zweryfikowane oferty (PKO 3 i 6 mies., mBank standard i Intensive) w `backend/offers/`, szkic Pekao w `backend/offers/draft/`, publikator migawki (`backend/publisher/publish.py`) i workflow `publish.yml` (GitHub Pages) | gotowe do uruchomienia; wymaga jednorazowo włączenia Pages (Settings → Pages → Source: GitHub Actions); ING i Citi nadal bez automatycznego odczytu; pełny parser stawek zastąpiono kontrolą obecności stawki na stronie |
 | 4 | Specyfikacja silnika finansowego, 13 przypadków kontrolnych K1–K11 (`test-data/engine/cases.json`) | gotowe |
 | 5 | Silnik w Kotlinie: kalendarz, odsetki, podatek, kapitalizacja, zerwanie, walidacja kwoty | gotowe, testy przechodzą, zadanie CI `engine` zielone |
 | 6 | Optymalizator strategii + doradca (zapisana decyzja, próg, odrzucone), przypadki O1–O12 | gotowe, testy lokalnie OK; CI do potwierdzenia po wgraniu |
-| 7 | Szkielet aplikacji Android (Compose, Room, WorkManager) z przykładowymi danymi; CI buduje APK | kod gotowy, **nie był kompilowany** (brak Android SDK w środowisku agenta); pierwszy przebieg zadania `android` w CI może wymagać poprawek |
+| 7 | Aplikacja Android (Compose, Room, WorkManager): szkielet zbudowany i działający na telefonie (APK z CI) | gotowe |
+| 7c | Przeprojektowany wygląd (Material 3, tryb ciemny, karty strategii z osią czasu), zawarte lokaty („Zawarłem pierwszą lokatę”), sekcja „Opcje ze zerwaniem” (`BreakAnalysis`, test `BreakTest`), eksport/import JSON (import zastępuje wszystko), pobieranie migawki z GitHub Pages z pamięcią podręczną (plik, nie tabela), ikona; wersja 0.2.0 | kod gotowy, **niekompilowany lokalnie** (kompiluje CI); nowa baza Room v2 (przy aktualizacji dane lokalne są kasowane) |
 
 Repozytorium: https://github.com/atrianus/lokaty. Zadania CI w `.github/workflows/ci.yml`: `structure`, `schema` (testy Python: 32), `engine` (testy Kotlin przez `bash engine/build-and-test.sh`), `android` (budowa APK, artefakt `lokaty-debug-apk`). Osobny workflow `collect.yml` uruchamia wykrywacz zmian codziennie o 5:30 UTC.
 
@@ -79,7 +80,7 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 
 - **Podatek (status roboczy):** 19% zaokrąglany w górę do grosza (art. 63 § 1a Ordynacji) i moment poboru przy kapitalizacji oparte na źródłach wtórnych. Do potwierdzenia w tekście ustawy (ISAP) i na kalkulatorach 3–5 banków (przypadki K3, K4).
 - Dzień roboczy i Wigilia w konkretnych bankach, liczenie dni (365/366), stawka przy zerwaniu: do sprawdzenia w regulaminach.
-- Szkice ofert: Pekao 1,60% na 12 mies. pochodzi z serwisu zewnętrznego i wygląda podejrzanie nisko; trzeba sprawdzić stronę banku.
+- Szkice ofert (`backend/offers/draft/`): Pekao standardowa 3/6/12 mies. = 2,00/1,80/1,60% (drugie źródło wtórne, bankoweabc.pl, zgodne z analizy.pl; niskie stawki są prawdopodobnie prawdziwe, to lokata standardowa; strona bankoweabc podaje aktualizację 20.08.2026 przy nagłówku „listopad 2026”); Alior nowe środki 365 dni = 3,00% (analizy.pl, nowe środki względem salda z 24.07.2026, tabela z 14.10.2026). Żadna z nich nie jest zweryfikowana na stronie banku. Millennium „Lokata na nowe środki” i VeloBank „edycja XIV/2026” są oznaczone jako wycofane z dystrybucji (analizy.pl).
 - Wykrywacz zmian: ING (treść ładowana skryptem) i Citi (HTTP 403) nie dają się odczytać automatycznie; adresy innych banków sprawdzone tylko częściowo; możliwe fałszywe alarmy (daty, liczniki na stronach).
 - Wydajność optymalizatora: 100 ofert, 12 mies., 3 nogi to ok. 0,5 s (zimny start 1,3 s) na serwerze; na telefonie niezmierzone.
 - Lista optymalizatora pokazuje tylko strategie niezdominowane (najlepsza zgodna z pełnym przeszukaniem).
@@ -92,10 +93,17 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 1. **Potwierdzić CI po wgraniu paczek z Etapów 6–7:** zadania `engine` (cztery sekcje testów + wydajność) i `android`. Przy czerwonym `android` użytkownik wkleja log błędu, agent poprawia kod.
 2. **Zainstalować APK** wg `docs/INSTRUKCJA-APK.md` i obejrzeć aplikację na telefonie; zebrać uwagi do ekranów.
 3. **Etap 3, dalej:** parser stawek dla PKO i mBanku na zapisanych stronach (`backend/collector/state/`); rozwiązanie dla ING i Citi; weryfikacja szkiców ofert i przeniesienie zatwierdzonych do `backend/offers/`; skrypt publikujący migawkę (`publisher/`) i GitHub Pages; decyzja o podpisie migawki.
-4. **Etap 7c (aplikacja):** pobieranie migawki z GitHub Pages z pamięcią podręczną (tabela `snapshot_cache`), oznaczanie zawartych lokat (`LockedLeg`), sekcja „Opcje ze zerwaniem”, eksport i import danych JSON (import zastępuje wszystko), ikona aplikacji.
-5. **Weryfikacja reguł podatkowych** w ISAP i na kalkulatorach banków; zmiana statusu reguł z „roboczy” na „potwierdzony”.
-6. Pomiar wydajności optymalizatora na prawdziwym telefonie.
-7. Dalsze etapy z dokumentu v2.2 (testy z użytkownikami, publikacja w Google Play, kwestie prawne i komercyjne).
+4. **Etap 7c/3 — po wgraniu:** włączyć Pages i uruchomić `publish.yml` (Actions → Publikacja migawki ofert → Run workflow); w aplikacji „Dane → Pobierz oferty teraz” powinno pokazać „pobrane z sieci”. Obejrzeć nowy wygląd i zebrać uwagi.
+5. **Kolejne oferty:** weryfikacja kolejnych banków (Pekao, Santander/Erste, Millennium, Alior, VeloBank, BNP; ING i Citi ręcznie), przeniesienie szkiców do `backend/offers/`; decyzja o podpisie migawki; pomiar na telefonie; osobne ekrany/akcje dla zawartych lokat kolejnych nóg.
+6. **Weryfikacja reguł podatkowych** w ISAP i na kalkulatorach banków; zmiana statusu reguł z „roboczy” na „potwierdzony”.
+7. Pomiar wydajności optymalizatora na prawdziwym telefonie.
+8. Dalsze etapy z dokumentu v2.2 (testy z użytkownikami, publikacja w Google Play, kwestie prawne i komercyjne).
+
+## 8a. Wyniki testów 23.11.2026 (środowisko agenta)
+
+- Python (`tools/`): 42 testy OK. Silnik Kotlin: Calendar, Interest, Optimizer, Advisor, BreakTest, PerfTest OK (100 ofert, 3 nogi: 0,6–0,7 s; zimny start 1,3–1,4 s). Publikator zbudował migawkę (4 oferty, 2 banki) i przeszedł walidator.
+- Nie da się sprawdzić lokalnie: kompilacji aplikacji Android (zadanie CI `android`), testu na telefonie, `check_rates.py` (brak sieci w Bash).
+- W tej sesji WebFetch otwierał tylko adresy zwrócone wcześniej przez WebSearch; strony banków (Millennium, Alior, VeloBank, Erste, BNP) nie były dostępne bezpośrednio, więc nowe oferty mogły powstać tylko jako szkice ze źródeł wtórnych.
 
 ## 9. Jak pracujemy (praktyczne uwagi)
 

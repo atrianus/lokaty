@@ -1,0 +1,47 @@
+{
+  "offer_id": "alior/nowe-srodki-365d",
+  "bank_id": "alior",
+  "product_name": "Lokata na nowe środki 365 dni",
+  "verification": "draft",
+  "term": {
+    "value": 365,
+    "unit": "days"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "3.00",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-10-14",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "yes",
+    "account_required": "yes",
+    "one_time_only": "no",
+    "notes": [
+      "Źródło wtórne (analizy.pl), strona banku nie sprawdzona",
+      "Nowe środki względem salda z 24.07.2026",
+      "Tabela oprocentowania z 14.10.2026, brak daty końca oferty",
+      "Odnowienie automatyczne dla lokat z bankowości internetowej"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BALI003_94/lokata-na-nowe-srodki",
+  "retrieved_at": "2026-11-23T06:30:00Z",
+  "last_verified_at": "2026-11-23T06:30:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "source_bank_page",
+    "valid_until"
+  ],
+  "amount_min": "1000",
+  "amount_max": "200000"
+}

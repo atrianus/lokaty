@@ -15,6 +15,9 @@ data class OfferRef(
     val oneTimeOnly: YesNoUnknown = YesNoUnknown.NO,
     val labels: List<String> = emptyList(),
     val meta: Map<String, String> = emptyMap(),
+    /** Nazwa produktu i adres strony oferty: tylko do wyświetlania, nie wpływają na obliczenia. */
+    val title: String = "",
+    val sourceUrl: String? = null,
 )
 
 data class Leg(val offerId: String, val start: LocalDate, val amount: BigDecimal, val result: Result, val labels: List<String> = emptyList())
