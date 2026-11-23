@@ -1,0 +1,51 @@
+name: Publikacja migawki ofert
+
+# Buduje snapshot.json ze zweryfikowanych ofert (backend/offers/*.json) i publikuje go na GitHub Pages:
+# https://atrianus.github.io/lokaty/snapshot.json (adres używany przez aplikację).
+# Wymaga jednorazowo: Settings → Pages → Source: GitHub Actions.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/offers/*.json"
+      - "backend/banks.json"
+      - "backend/publisher/**"
+      - "contracts/**"
+      - ".github/workflows/publish.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install jsonschema
+
+      - name: Zbuduj i sprawdź migawkę
+        run: python backend/publisher/publish.py --out site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Opublikuj na GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
