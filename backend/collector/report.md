@@ -1,7 +1,9 @@
-# Raport zmian ofert (2026-11-22 13:29 UTC)
+# Raport zmian ofert (2026-11-23 16:17 UTC)
 
-- **changed** `pekao-standardowa` (pekao): 721c32673e13
-- **changed** `velobank-nowe-srodki` (velobank): abee0e28f2b0
+- **changed** `pekao-standardowa` (pekao): 4c5544ab4556
+- **changed** `alior-oferta-lokat` (alior): 1e289d151be7
+- **changed** `alior-nowe-srodki` (alior): 20c15ca19493
+- **changed** `velobank-nowe-srodki` (velobank): 3c8b3a0a92d8
 - **error** `ing-lokata-terminowa` (ing-bsk): za mało tekstu (strona wymaga skryptów lub zablokowała pobranie)
 - **error** `ing-oprocentowanie` (ing-bsk): za mało tekstu (strona wymaga skryptów lub zablokowała pobranie)
 - **error** `citi-produkty-oszczednosciowe` (citi-handlowy): HTTPError: HTTP Error 403: Forbidden
@@ -11,5 +13,3 @@
 - **unchanged** `mbank-promo-3m` (mbank): 7ef27ff59ad6
 - **unchanged** `bnp-oszczednosci` (bnp-paribas): 5a4680e0bb75
 - **unchanged** `millennium-nowe-srodki` (millennium): 118f920158c5
-- **unchanged** `alior-oferta-lokat` (alior): 86e9532dfccc
-- **unchanged** `alior-nowe-srodki` (alior): f0a9969c2a6b
