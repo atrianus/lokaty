@@ -2,7 +2,7 @@
   "offer_id": "alior/nowe-srodki-365d",
   "bank_id": "alior",
   "product_name": "Lokata na nowe środki 365 dni",
-  "verification": "draft",
+  "verification": "verified",
   "term": {
     "value": 365,
     "unit": "days"
@@ -19,13 +19,14 @@
   "conditions": {
     "new_customer_only": "no",
     "new_funds_only": "yes",
-    "account_required": "yes",
+    "account_required": "unknown",
     "one_time_only": "no",
     "notes": [
-      "Źródło wtórne (analizy.pl), strona banku nie sprawdzona",
-      "Nowe środki względem salda z 24.07.2026",
-      "Tabela oprocentowania z 14.10.2026, brak daty końca oferty",
-      "Odnowienie automatyczne dla lokat z bankowości internetowej"
+      "Nowe środki: nadwyżka na rachunkach depozytowych w PLN względem salda z 9.10.2026",
+      "Limit 300 000 zł łącznie na lokaty na nowe środki, osobno dla każdego terminu",
+      "Strona nie podaje daty końca oferty",
+      "Odnowienie domyślne dla lokat z Alior Online i Alior Mobile",
+      "Stawka i warunki porównane ze stroną banku 24.11.2026"
     ]
   },
   "early_termination": {
@@ -33,15 +34,14 @@
     "interest_treatment": "lose_all"
   },
   "availability_rule": "next_business_day",
-  "source_url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BALI003_94/lokata-na-nowe-srodki",
-  "retrieved_at": "2026-11-23T06:30:00Z",
-  "last_verified_at": "2026-11-23T06:30:00Z",
+  "source_url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
+  "retrieved_at": "2026-11-24T17:10:00Z",
+  "last_verified_at": "2026-11-24T17:10:00Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",
-    "source_bank_page",
     "valid_until"
   ],
   "amount_min": "1000",
-  "amount_max": "200000"
+  "amount_max": "300000"
 }

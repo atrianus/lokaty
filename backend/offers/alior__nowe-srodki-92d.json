@@ -1,0 +1,47 @@
+{
+  "offer_id": "alior/nowe-srodki-92d",
+  "bank_id": "alior",
+  "product_name": "Lokata na nowe środki 92 dni",
+  "verification": "verified",
+  "term": {
+    "value": 92,
+    "unit": "days"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "3.30",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-10-14",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "yes",
+    "account_required": "unknown",
+    "one_time_only": "no",
+    "notes": [
+      "Nowe środki: nadwyżka na rachunkach depozytowych w PLN względem salda z 9.10.2026",
+      "Limit 300 000 zł łącznie na lokaty na nowe środki, osobno dla każdego terminu",
+      "Strona nie podaje daty końca oferty",
+      "Odnowienie domyślne dla lokat z Alior Online i Alior Mobile",
+      "Stawka i warunki porównane ze stroną banku 24.11.2026"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
+  "retrieved_at": "2026-11-24T17:10:00Z",
+  "last_verified_at": "2026-11-24T17:10:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "valid_until"
+  ],
+  "amount_min": "1000",
+  "amount_max": "300000"
+}

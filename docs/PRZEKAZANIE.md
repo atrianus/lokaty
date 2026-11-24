@@ -80,7 +80,8 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 
 - **Podatek (status roboczy):** 19% zaokrąglany w górę do grosza (art. 63 § 1a Ordynacji) i moment poboru przy kapitalizacji oparte na źródłach wtórnych. Do potwierdzenia w tekście ustawy (ISAP) i na kalkulatorach 3–5 banków (przypadki K3, K4).
 - Dzień roboczy i Wigilia w konkretnych bankach, liczenie dni (365/366), stawka przy zerwaniu: do sprawdzenia w regulaminach.
-- Szkice ofert (`backend/offers/draft/`): Pekao standardowa 3/6/12 mies. = 2,00/1,80/1,60% (drugie źródło wtórne, bankoweabc.pl, zgodne z analizy.pl; niskie stawki są prawdopodobnie prawdziwe, to lokata standardowa; strona bankoweabc podaje aktualizację 20.08.2026 przy nagłówku „listopad 2026”); Alior nowe środki 365 dni = 3,00% (analizy.pl, nowe środki względem salda z 24.07.2026, tabela z 14.10.2026). Żadna z nich nie jest zweryfikowana na stronie banku. Millennium „Lokata na nowe środki” i VeloBank „edycja XIV/2026” są oznaczone jako wycofane z dystrybucji (analizy.pl).
+- Alior: 3 zweryfikowane oferty na nowe środki (24.11.2026, strona banku): 92 dni 3,3%, 182 dni 3,4%, 365 dni 3,0%; min. 1 000 zł, limit 300 000 zł na termin; nowe środki względem salda z 9.10.2026; zerwanie = utrata odsetek; brak daty końca oferty i reguły liczenia dni. Dokumenty: tabela oprocentowania i regulamin rachunków depozytowych na stronie oferty. Starszy szkic (analizy.pl, saldo z 24.07) był nieaktualny i został usunięty.
+- Pekao (szkice, `backend/offers/draft/`): standardowa 3/6/12 mies. = 2,00/1,80/1,60% ze źródła wtórnego; strona banku potwierdza tylko „do 2,0%”, min. 1 000 zł, odsetki na koniec, zerwanie bez odsetek; tabela oprocentowania (PDF) zablokowana dla narzędzia (robots), wymaga wklejenia przez użytkownika. Promocje „Lokuj z nami” (3 mies., 3,3–3,4%, 5 000–100 000 zł, nowi klienci i saldo do 5 tys. zł) edycje IV–VI wygasły; edycja VII nieodczytana. Millennium i VeloBank: lokaty na nowe środki oznaczone jako wycofane (analizy.pl).
 - Wykrywacz zmian: ING (treść ładowana skryptem) i Citi (HTTP 403) nie dają się odczytać automatycznie; adresy innych banków sprawdzone tylko częściowo; możliwe fałszywe alarmy (daty, liczniki na stronach).
 - Wydajność optymalizatora: 100 ofert, 12 mies., 3 nogi to ok. 0,5 s (zimny start 1,3 s) na serwerze; na telefonie niezmierzone.
 - Lista optymalizatora pokazuje tylko strategie niezdominowane (najlepsza zgodna z pełnym przeszukaniem).
@@ -103,7 +104,7 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 
 - Python (`tools/`): 42 testy OK. Silnik Kotlin: Calendar, Interest, Optimizer, Advisor, BreakTest, PerfTest OK (100 ofert, 3 nogi: 0,6–0,7 s; zimny start 1,3–1,4 s). Publikator zbudował migawkę (4 oferty, 2 banki) i przeszedł walidator.
 - Nie da się sprawdzić lokalnie: kompilacji aplikacji Android (zadanie CI `android`), testu na telefonie, `check_rates.py` (brak sieci w Bash).
-- W tej sesji WebFetch otwierał tylko adresy zwrócone wcześniej przez WebSearch; strony banków (Millennium, Alior, VeloBank, Erste, BNP) nie były dostępne bezpośrednio, więc nowe oferty mogły powstać tylko jako szkice ze źródeł wtórnych.
+- W tej sesji WebFetch otwierał tylko adresy zwrócone wcześniej przez WebSearch; strony banków otwierały się tylko po wklejeniu adresu przez użytkownika (Alior, Pekao: tak; Millennium, VeloBank, Erste, BNP: nie sprawdzone), więc nowe oferty mogły powstać tylko jako szkice ze źródeł wtórnych.
 
 ## 9. Jak pracujemy (praktyczne uwagi)
 
