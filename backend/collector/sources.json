@@ -1,17 +1,76 @@
 {
   "sources": [
-    {"id": "pko-bp-nowe-srodki", "bank_id": "pko-bp", "url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow"},
-    {"id": "pekao-standardowa", "bank_id": "pekao", "url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BPEK013_42/lokata-standardowa-oferta-detaliczna", "note": "źródło wtórne; zastąpić stroną banku"},
-    {"id": "erste-lokata-terminowa", "bank_id": "erste-bank-polska", "url": "https://www.erste.pl/klient-indywidualny/oszczednosci-i-inwestycje/lokata-terminowa"},
-    {"id": "erste-oprocentowanie", "bank_id": "erste-bank-polska", "url": "https://www.erste.pl/przydatne-informacje/oprocentowanie"},
-    {"id": "ing-lokata-terminowa", "bank_id": "ing-bsk", "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/lokata-terminowa"},
-    {"id": "ing-oprocentowanie", "bank_id": "ing-bsk", "url": "https://www.ing.pl/indywidualni/tabele-i-regulaminy/oprocentowanie/rachunki-oszczednosciowe-lokaty"},
-    {"id": "mbank-promo-3m", "bank_id": "mbank", "url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/"},
-    {"id": "bnp-oszczednosci", "bank_id": "bnp-paribas", "url": "https://www.bnpparibas.pl/klienci-indywidualni/oszczednosci-i-inwestycje"},
-    {"id": "millennium-nowe-srodki", "bank_id": "millennium", "url": "https://www.bankmillennium.pl/klienci-indywidualni/produkty-oszczednosciowe/lokaty/lokata-na-nowe-srodki"},
-    {"id": "alior-oferta-lokat", "bank_id": "alior", "url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/oferta-lokat.html"},
-    {"id": "alior-nowe-srodki", "bank_id": "alior", "url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html"},
-    {"id": "citi-produkty-oszczednosciowe", "bank_id": "citi-handlowy", "url": "https://www.citibankonline.pl/konta-osobiste/produkty-oszczednosciowe/"},
-    {"id": "velobank-nowe-srodki", "bank_id": "velobank", "url": "https://www.velobank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html"}
+    {
+      "id": "pko-bp-nowe-srodki",
+      "bank_id": "pko-bp",
+      "url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow"
+    },
+    {
+      "id": "pekao-standardowa",
+      "bank_id": "pekao",
+      "url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BPEK013_42/lokata-standardowa-oferta-detaliczna",
+      "note": "źródło wtórne; zastąpić stroną banku",
+      "role": "signal"
+    },
+    {
+      "id": "erste-lokata-terminowa",
+      "bank_id": "erste-bank-polska",
+      "url": "https://www.erste.pl/klient-indywidualny/oszczednosci-i-inwestycje/lokata-terminowa"
+    },
+    {
+      "id": "erste-oprocentowanie",
+      "bank_id": "erste-bank-polska",
+      "url": "https://www.erste.pl/przydatne-informacje/oprocentowanie"
+    },
+    {
+      "id": "ing-lokata-terminowa",
+      "bank_id": "ing-bsk",
+      "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/lokata-terminowa"
+    },
+    {
+      "id": "ing-oprocentowanie",
+      "bank_id": "ing-bsk",
+      "url": "https://www.ing.pl/indywidualni/tabele-i-regulaminy/oprocentowanie/rachunki-oszczednosciowe-lokaty"
+    },
+    {
+      "id": "mbank-promo-3m",
+      "bank_id": "mbank",
+      "url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/"
+    },
+    {
+      "id": "bnp-oszczednosci",
+      "bank_id": "bnp-paribas",
+      "url": "https://www.bnpparibas.pl/klienci-indywidualni/oszczednosci-i-inwestycje"
+    },
+    {
+      "id": "millennium-nowe-srodki",
+      "bank_id": "millennium",
+      "url": "https://www.bankmillennium.pl/klienci-indywidualni/produkty-oszczednosciowe/lokaty/lokata-na-nowe-srodki"
+    },
+    {
+      "id": "alior-oferta-lokat",
+      "bank_id": "alior",
+      "url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/oferta-lokat.html"
+    },
+    {
+      "id": "alior-nowe-srodki",
+      "bank_id": "alior",
+      "url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html"
+    },
+    {
+      "id": "citi-produkty-oszczednosciowe",
+      "bank_id": "citi-handlowy",
+      "url": "https://www.citibankonline.pl/konta-osobiste/produkty-oszczednosciowe/"
+    },
+    {
+      "id": "velobank-nowe-srodki",
+      "bank_id": "velobank",
+      "url": "https://www.velobank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html"
+    },
+    {
+      "id": "pekao-lokuj-z-nami-7",
+      "bank_id": "pekao",
+      "url": "https://www.pekao.com.pl/klient-indywidualny/oszczedzam-i-inwestuje/lokuj-z-nami-7.html"
+    }
   ]
 }

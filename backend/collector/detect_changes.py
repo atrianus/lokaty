@@ -74,6 +74,10 @@ def main():
     sources = json.loads((HERE / "sources.json").read_text(encoding="utf-8"))["sources"]
     results = run(sources, HERE / "state")
     (HERE / "report.md").write_text(report(results), encoding="utf-8")
+    # strony pobrane poprawnie w TYM przebiegu (synchronizacja ofert używa tylko takich)
+    (HERE / "state" / "last_run.json").write_text(json.dumps({
+        "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "fresh": sorted(r["id"] for r in results if r["status"] != "error")}, indent=2), encoding="utf-8")
     print(report(results))
     return 0  # błędy pojedynczych stron nie psują przebiegu
 

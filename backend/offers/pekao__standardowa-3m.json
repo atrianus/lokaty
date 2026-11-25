@@ -1,0 +1,45 @@
+{
+  "offer_id": "pekao/standardowa-3m",
+  "bank_id": "pekao",
+  "product_name": "Lokata standardowa 3 mies.",
+  "verification": "verified",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "2.00",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-06",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "no",
+    "account_required": "yes",
+    "one_time_only": "no",
+    "notes": [
+      "Stawka dla Oferty Detalicznej w Pekao24 i PeoPay (Premium i Private Banking mają wyższe, oddziały 1,50%)",
+      "Tabela oprocentowania obowiązuje od 6.11.2026 (komunikat banku, tabela 3A)",
+      "Odsetki wypłacane na koniec okresu; lokata może być odnawialna lub nieodnawialna",
+      "Stawki 6 i 12 mies. z tabeli PDF (strona produktu podaje tylko „do 2,0%”)"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.pekao.com.pl/klient-indywidualny/oszczedzam-i-inwestuje/lokata-standardowa.html",
+  "retrieved_at": "2026-11-25T11:00:00Z",
+  "last_verified_at": "2026-11-25T11:00:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "amount_max"
+  ],
+  "amount_min": "1000"
+}
