@@ -89,7 +89,7 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 - Podpis migawki (algorytm): nierozstrzygnięty; suma kontrolna i podpis mają leżeć poza plikiem migawki.
 - Aplikacja Android jeszcze nigdy nie została skompilowana: spodziewaj się 1–3 rund poprawek po pierwszym przebiegu `android` w CI.
 
-## 8. Następne kroki (w proponowanej kolejności)
+## 8. Następne kroki (w proponowanej kolejności; stan z 25.11: pozycje 1–3 wykonane, bieżący temat to 8b)
 
 1. **Potwierdzić CI po wgraniu paczek z Etapów 6–7:** zadania `engine` (cztery sekcje testów + wydajność) i `android`. Przy czerwonym `android` użytkownik wkleja log błędu, agent poprawia kod.
 2. **Zainstalować APK** wg `docs/INSTRUKCJA-APK.md` i obejrzeć aplikację na telefonie; zebrać uwagi do ekranów.
@@ -105,6 +105,14 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 - Python (`tools/`): 42 testy OK. Silnik Kotlin: Calendar, Interest, Optimizer, Advisor, BreakTest, PerfTest OK (100 ofert, 3 nogi: 0,6–0,7 s; zimny start 1,3–1,4 s). Publikator zbudował migawkę (4 oferty, 2 banki) i przeszedł walidator.
 - Nie da się sprawdzić lokalnie: kompilacji aplikacji Android (zadanie CI `android`), testu na telefonie, `check_rates.py` (brak sieci w Bash).
 - W tej sesji WebFetch otwierał tylko adresy zwrócone wcześniej przez WebSearch; strony banków otwierały się tylko po wklejeniu adresu przez użytkownika (Alior, Pekao: tak; Millennium, VeloBank, Erste, BNP: nie sprawdzone), więc nowe oferty mogły powstać tylko jako szkice ze źródeł wtórnych.
+
+## 8b. Automatyczne zaciąganie ofert (25.11.2026)
+
+- Zatwierdzone: zmiana samej stawki istniejącej oferty aktualizuje się automatycznie; nowe oferty i zmiany warunków zatwierdza człowiek; układ hybrydowy (parsery dla stawek, model Haiku dla warunków i nowych ofert, koszt rzędu 0,3 USD miesięcznie). Konto API założone, sekret `ANTHROPIC_API_KEY` dodany w GitHub Secrets.
+- Kod: `backend/extractor/` (`parsers.py` Alior, PKO, mBank, Pekao „Lokuj z nami VII”; `sync_offers.py`; `llm_extract.py`; README), testy `tools/test_extractor.py` (21), próbki stron w `test-data/extractor/`, workflow `collect.yml` rozszerzony o synchronizację, model, publikację i Issue „Lokaty: oferty do przeglądu”. Wszystkie 63 testy lokalne OK.
+- Nietestowane na żywo: wywołanie API modelu (brak sieci w środowisku agenta; format zapytania i odpowiedzi sprawdzony tylko na atrapie), workflow w Actions, uprawnienia `issues: write` i `actions: write`. Spodziewaj się poprawek po pierwszym przebiegu.
+- Ograniczenia: brak parserów Pekao standardowa (tabela PDF), Erste, BNP, Millennium, VeloBank, ING, Citi (ING i Citi wymagają przeglądarki lub ręcznie). Strona „pekao-standardowa” w `sources.json` jest serwisem zewnętrznym i ma rolę `signal`.
+- Push z sesji agenta nadal zwraca 403 (brak instalacji Claude GitHub App); pliki wgrywane ręcznie.
 
 ## 9. Jak pracujemy (praktyczne uwagi)
 

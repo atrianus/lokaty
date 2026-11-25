@@ -9,7 +9,8 @@
       "id": "pekao-standardowa",
       "bank_id": "pekao",
       "url": "https://www.analizy.pl/lokaty-i-konta-oszczednosciowe/BPEK013_42/lokata-standardowa-oferta-detaliczna",
-      "note": "źródło wtórne; zastąpić stroną banku"
+      "note": "źródło wtórne; zastąpić stroną banku",
+      "role": "signal"
     },
     {
       "id": "erste-lokata-terminowa",
