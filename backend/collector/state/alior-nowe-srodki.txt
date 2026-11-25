@@ -118,11 +118,11 @@ Alior Business
 dla klientów biznesowych
 Wyszukiwanie
 Szukaj
-oproc. do 3,4%
+oproc. do 3,6%
 Lokata na nowe środki
 Nie zwlekaj z oszczędzaniem!
 Załóż lokatę
-Oprocentowanie do 3,4%
+Oprocentowanie do 3,6%
 w skali roku
 Trzy terminy
 do wyboru
@@ -133,9 +133,9 @@ Lokata na nowe środki ze stałym oprocentowaniem
 Termin lokaty
 Oprocentowanie
 92 dni
-3,3%
+3,6%
 182 dni
-3,4%
+3,6%
 365 dni
 3%
 Jak założyć lokatę?
@@ -149,7 +149,7 @@ Załóż lokatę
 w Alior Online lub Alior Mobile
 Załóż lokatę
 Co to są nowe środki?
-Lokaty na nowe środki oferujemy wyłącznie w PLN. Nowe środki to nadwyżka pieniędzy na Twoich indywidualnych i wspólnych rachunkach depozytowych w PLN w naszym banku (z wyjątkiem rachunków maklerskich oraz kont, które prowadzimy w ramach Kantoru Walutowego Alior Banku) w dniu otwarcia lokaty, w porównaniu do ich salda na 9 października 2026 r.
+Lokaty na nowe środki oferujemy wyłącznie w PLN. Nowe środki to nadwyżka pieniędzy na Twoich indywidualnych i wspólnych rachunkach depozytowych w PLN w naszym banku (z wyjątkiem rachunków maklerskich oraz kont, które prowadzimy w ramach Kantoru Walutowego Alior Banku) w dniu otwarcia lokaty, w porównaniu do ich salda na 20 listopada 2026 r.
 Produkty towarzyszące
 Alior Mobile
 Twój bank w telefonie. Z aplikacją mobilną Alior Mobile masz szybki dostęp do swoich finansów i wielu dodatkowych możliwości na wyciągnięcie ręki.
@@ -157,7 +157,7 @@ Alior Konto
 Otwórz Alior Konto z kartą online i odbierz nagrody na letnie przyjemności: bonus do 800 zł i obrączkę płatniczą idealną na wakacje. Użyj kodu PREMIA800.
 Pytania i odpowiedzi
 Czym są nowe środki?
-Nowe środki w PLN to nadwyżka pieniędzy na Twoich indywidualnych i wspólnych rachunkach depozytowych w PLN w naszym banku (nie uwzględniamy rachunków maklerskich, ani kont prowadzonych w ramach Kantoru Walutowego Alior Banku) w dniu otwarcia lokaty, w porównaniu do ich salda na 9 października 2026 r.
+Nowe środki w PLN to nadwyżka pieniędzy na Twoich indywidualnych i wspólnych rachunkach depozytowych w PLN w naszym banku (nie uwzględniamy rachunków maklerskich, ani kont prowadzonych w ramach Kantoru Walutowego Alior Banku) w dniu otwarcia lokaty, w porównaniu do ich salda na 20 listopada 2026 r.
 Czy mogę zerwać moją lokatę na nowe środki przed terminem?
 Oczywiście, możesz to zrobić w każdej chwili za pośrednictwem Alior Online, Alior Mobile lub w naszej placówce. Pamiętaj, że taka operacja jest nieodwracalna. Utracisz wszystkie odsetki naliczone w trakcie bieżącego okresu umownego, a bank zwróci na Twoje konto kapitał wpłacony na lokatę.
 Otworzyłem lokatę odnawialną. Jakie będzie jej oprocentowanie w kolejnym okresie umownym?
@@ -169,7 +169,7 @@ Zaloguj się do Alior Online lub Alior Mobile. W Alior Online na Pulpicie znajdz
 Dlaczego nie widzę żadnych ofert w zakładce Dla Ciebie?
 Sprawdź i ewentualnie zmień ustawienia swoich zgód marketingowych w Alior Online- w górnym pasku Ustawienia, a następnie Zgody i oświadczenia. Musisz mieć ustawioną Zgodę podstawową oraz zgodę na sms/email/telefon od banku lub Zgodę podstawową oraz zgodę na sms/email od banku. Zachęcamy do regularnego sprawdzania ofert dostępnych w zakładce Dla Ciebie.
 Jaka jest maksymalna kwota lokaty na nowe środki?
-Możesz otworzyć lokaty na maksymalną kwotę 300 tys. zł dla każdego z dostępnych terminów tj. dla lokaty 92-dniowej, dla lokaty 182-dniowej oraz dla lokaty 365-dniowej (dotyczy lokat otwartych od 14 października 2026 r.)
+Możesz otworzyć lokaty na maksymalną kwotę 300 tys. zł dla każdego z dostępnych terminów tj. dla lokaty 92-dniowej, dla lokaty 182-dniowej oraz dla lokaty 365-dniowej (dotyczy lokat otwartych od 25 listopada 2026 r.)
 Przydatne dokumenty
 Regulamin rachunków oszczędnościowo-rozliczeniowych, oszczędnościowych i terminowych lokat oszczędnościowych
 pdf
@@ -188,18 +188,17 @@ Oprocentowanie stałe
 Termin lokaty
 Oprocentowanie
 92 dni
-3,3%
+3,6%
 182 dni
-3,4%
+3,6%
 365 dni
 3%
 Odsetki kapitalizowane są zgodnie z terminem zapadalności.
 Nota prawna
-Oprocentowanie lokaty na nowe środki w PLN jest stałe i podawane w skali roku. Oprocentowanie lokaty wynosi: 3,3% na 92 dni; 3,4% na 182 dni oraz 3% na 365 dni.
-Lokata na nowe środki jest dostępna dla Klientów, którzy deponują nowe środki, rozumiane jako nadwyżkę środków pieniężnych ponad łączne saldo środków zgromadzonych na należących do Klienta rachunkach oszczędnościowo rozliczeniowych, rachunkach oszczędnościowych oraz lokatach terminowych prowadzonych w złotych w Alior Banku, według stanu na 9 października 2026 r.
-Minimalna kwota lokaty wynosi 1 000 zł. Maksymalna łączna kwota lokat na nowe środki otwartych od 14 października 2026 r., oddzielnie dla każdego z dostępnych okresów, wynosi 300 000 zł.
-Lokaty otwarte w bankowości internetowej Alior Online lub w aplikacji mobilnej Alior Mobile są domyślnie odnawialne, a naliczone odsetki powiększają ich kwotę. Lokaty otwarte w placówce Banku mogą być odnawialne lub nieodnawialne. W dowolnym momencie możesz zmienić dyspozycję odnawialności za pośrednictwem Alior Online, Alior Mobile, Infolinii lub w placówce Banku.
-W przypadku lokat odnawialnych oprocentowanie obowiązujące w kolejnym okresie umownym jest określone w Tabeli Oprocentowania Alior Banku S.A. dla Klientów Indywidualnych, w rozdziale „Oprocentowanie lokat odnawialnych lub wycofanych z oferty Banku”, obowiązującej w dniu odnowienia lokaty.
+Oprocentowanie lokaty na nowe środki w PLN jest stałe i podawane w skali roku. Oprocentowanie lokaty wynosi: 3,6% na 92 dni; 3,6% na 182 dni oraz 3% na 365 dni.
+Lokata na nowe środki jest dostępna dla Klientów, którzy deponują nowe środki, rozumiane jako nadwyżkę środków pieniężnych ponad łączne saldo środków zgromadzonych na należących do Klienta rachunkach oszczędnościowo rozliczeniowych, rachunkach oszczędnościowych oraz lokatach terminowych prowadzonych w złotych w Alior Banku, według stanu na 20 listopada 2026 r.
+Minimalna kwota lokaty wynosi 1 000 zł. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r., oddzielnie dla każdego z dostępnych okresów, wynosi 300 000 zł.
+Lokaty otwarte w bankowości internetowej Alior Online lub w aplikacji mobilnej Alior Mobile są domyślnie odnawialne, a naliczone odsetki powiększają ich kwotę. Lokaty otwarte w placówce Banku mogą być odnawialne lub nieodnawialne. W dowolnym momencie możesz zmienić dyspozycję odnawialności za pośrednictwem Alior Online, Alior Mobile, Infolinii lub w placówce Banku. W przypadku lokat odnawialnych oprocentowanie obowiązujące w kolejnym okresie umownym jest określone w Tabeli Oprocentowania Alior Banku S.A. dla Klientów Indywidualnych, w rozdziale „Oprocentowanie lokat odnawialnych lub wycofanych z oferty Banku”, obowiązującej w dniu odnowienia lokaty.
 Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym.
 Szczegółowe zasady dotyczące prowadzenia i obsługi rachunków są określone w Regulaminie rachunków oszczędnościowo-rozliczeniowych, oszczędnościowych i terminowych lokat oszczędnościowych. Pozostałe informacje znajdują się w Regulaminie korzystania z Kanałów Elektronicznych dla Klientów Indywidualnych, Tabeli oprocentowania Alior Banku S.A. dla Klientów Indywidualnych oraz Taryfie Opłat i Prowizji Alior Banku S.A. dla Klientów Indywidualnych.
 Wszystkie wymienione dokumenty są dostępne w placówkach banku oraz na naszej stronie w zakładce Dokumenty – klienci indywidualni. Pojęcia zgodne z wykazem usług reprezentatywnych dostępne są w
@@ -228,7 +227,7 @@ Lokata na nowe środki to sposób na uporządkowane i świadome oszczędzanie. N
 Alior Bank
 Klienci indywidualni
 Oszczędności i inwestycje
-Lokata na nowe środki do 3,4%: jak założyć?
+Lokata na nowe środki do 3,6%: jak założyć?
 Pobierz Alior Mobile
 Infolinia: 12 370 70 00
 koszt połączenia wg taryfy operatora
