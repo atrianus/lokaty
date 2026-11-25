@@ -82,7 +82,7 @@ class SyncTest(unittest.TestCase):
         self.assertEqual(self.offer("alior/nowe-srodki-92d")["last_verified_at"], "2026-11-25T05:30:00Z")
 
     def test_sama_zmiana_stawki_aktualizuje_automatycznie(self):
-        self.edit_page("alior-nowe-srodki", "3,3% na 92 dni", "3,5% na 92 dni")
+        self.edit_page("alior-nowe-srodki", "3,6% na 92 dni", "3,5% na 92 dni")
         r = self.sync()
         self.assertEqual(self.offer("alior/nowe-srodki-92d")["rate_annual"], "3.50")
         self.assertEqual(len(r["updated"]), 1)
@@ -100,15 +100,24 @@ class SyncTest(unittest.TestCase):
         self.assertEqual(self.offer("alior/nowe-srodki-92d")["amount_max"], "300000")
 
     def test_skok_stawki_o_wiecej_niz_punkt_do_przegladu(self):
-        self.edit_page("alior-nowe-srodki", "3,3% na 92 dni", "5,5% na 92 dni")
+        self.edit_page("alior-nowe-srodki", "3,6% na 92 dni", "5,5% na 92 dni")
         r = self.sync()
         self.assertTrue(any("podejrzana" in x for x in r["review"]))
-        self.assertEqual(self.offer("alior/nowe-srodki-92d")["rate_annual"], "3.30")
+        self.assertEqual(self.offer("alior/nowe-srodki-92d")["rate_annual"], "3.60")
 
     def test_oferta_zniknela_ze_strony(self):
-        self.edit_page("alior-nowe-srodki", "3,3% na 92 dni; ", "")
+        self.edit_page("alior-nowe-srodki", "3,6% na 92 dni; ", "")
         r = self.sync()
         self.assertTrue(any("alior/nowe-srodki-92d" in x and "nie ma już" in x for x in r["review"]))
+
+    def test_nowa_edycja_alior_zmienia_stawke_i_dzien_odniesienia_to_przeglad(self):
+        """Regresja z 25.11.2026: nowa edycja (inny dzień odniesienia i data limitów) nie może przejść jako sama zmiana stawki."""
+        old = (FIX / "alior-nowe-srodki-edycja-2026-10-14.txt").read_text(encoding="utf-8")
+        (self.b / "collector" / "state" / "alior-nowe-srodki.txt").write_text(old, encoding="utf-8")
+        before = self.offer("alior/nowe-srodki-92d")
+        r = self.sync()
+        self.assertTrue(any("valid_from" in x for x in r["review"]))
+        self.assertEqual(self.offer("alior/nowe-srodki-92d"), before)
 
     def test_zmiana_dat_okresu_to_przeglad(self):
         self.edit_page("pko-bp-nowe-srodki", "Okres oferowania 15.11-14.12.2026", "Okres oferowania 15.12-14.01.2027")
@@ -124,7 +133,7 @@ class SyncTest(unittest.TestCase):
 
     def test_strona_nieswieza_jest_pomijana(self):
         before = self.offer("alior/nowe-srodki-92d")
-        self.edit_page("alior-nowe-srodki", "3,3% na 92 dni", "3,5% na 92 dni")
+        self.edit_page("alior-nowe-srodki", "3,6% na 92 dni", "3,5% na 92 dni")
         r = self.sync(fresh=set())
         self.assertEqual(self.offer("alior/nowe-srodki-92d"), before)
         self.assertEqual(r["updated"], [])

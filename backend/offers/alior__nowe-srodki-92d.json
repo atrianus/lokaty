@@ -15,18 +15,18 @@
     "source": "default",
     "mode": "half_up"
   },
-  "valid_from": "2026-10-14",
+  "valid_from": "2026-11-25",
   "conditions": {
     "new_customer_only": "no",
     "new_funds_only": "yes",
     "account_required": "unknown",
     "one_time_only": "no",
     "notes": [
-      "Nowe środki: nadwyżka na rachunkach depozytowych w PLN względem salda z 9.10.2026",
-      "Limit 300 000 zł łącznie na lokaty na nowe środki, osobno dla każdego terminu",
+      "Nowe środki: nadwyżka na rachunkach depozytowych w PLN względem salda z 20.11.2026 (dzień odniesienia zmienia się z każdą edycją)",
+      "Limit 300 000 zł łącznie na lokaty na nowe środki, osobno dla każdego terminu (dotyczy lokat otwartych od 25.11.2026)",
       "Strona nie podaje daty końca oferty",
       "Odnowienie domyślne dla lokat z Alior Online i Alior Mobile",
-      "Stawka i warunki porównane ze stroną banku 24.11.2026"
+      "Stawka i warunki porównane z tekstem strony banku 25.11.2026 (edycja od 25.11.2026: 3,6% na 92 i 182 dni, 3,0% na 365 dni)"
     ]
   },
   "early_termination": {

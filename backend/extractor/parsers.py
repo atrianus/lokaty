@@ -37,9 +37,14 @@ def alior_nowe_srodki(text):
     pairs = re.findall(r"(\d+(?:,\d+)?)\s*%\s*na\s*(\d+)\s*dni", m.group(1))
     lo = re.search(r"Minimalna kwota lokaty wynosi\s*([\d ]+?)\s*zł", t)
     hi = re.search(r"oddzielnie dla każdego z dostępnych okresów, wynosi\s*([\d ]+?)\s*zł", t)
+    frm = re.search(r"otwartych od (\d{1,2}) (\w+) (\d{4}) r", t)
+    try:
+        valid_from = pl_date(*frm.groups()) if frm else None
+    except (KeyError, ValueError):
+        valid_from = None
     out = {}
     for r, days in pairs:
-        out[f"alior/nowe-srodki-{days}d"] = {
+        out[f"alior/nowe-srodki-{days}d"] = {**({"valid_from": valid_from} if valid_from else {}),
             "rate_annual": rate(r), "term": {"value": int(days), "unit": "days"},
             "amount_min": money(lo.group(1)) if lo else None, "amount_max": money(hi.group(1)) if hi else None}
     return out
@@ -75,6 +80,9 @@ def mbank_promo_3m(text):
     until = re.search(r"Do promocji możesz przystąpić do (\d{2})\.(\d{2})\.(\d{4})", t)
     base = {"term": {"value": 3, "unit": "months"},
             "amount_min": money(lo.group(1)) if lo else None, "amount_max": money(hi.group(1)) if hi else None}
+    frm = re.search(r"obowiązuje od (\d{2})\.(\d{2})\.(\d{4})", t)
+    if frm:
+        base["valid_from"] = date(int(frm.group(3)), int(frm.group(2)), int(frm.group(1))).isoformat()
     if until:
         base["valid_until"] = date(int(until.group(3)), int(until.group(2)), int(until.group(1))).isoformat()
     out = {}
