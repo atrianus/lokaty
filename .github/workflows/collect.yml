@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  issues: write
+  actions: write
 
 jobs:
   detect:
@@ -24,10 +26,43 @@ jobs:
       - name: Sprawdź, czy stawki ofert nadal są na stronach banków
         run: python backend/collector/check_rates.py
 
+      - name: Zsynchronizuj oferty ze stronami (tylko zmiana stawki aktualizuje się sama)
+        run: python backend/extractor/sync_offers.py
+
+      - name: Ekstrakcja modelem (szkice, tylko dla zmienionych stron)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python backend/extractor/llm_extract.py | tee backend/extractor/llm-report.txt
+
       - name: Zapisz zmiany w repozytorium
+        id: commit
         run: |
           git config user.name "lokaty-bot"
           git config user.email "lokaty-bot@users.noreply.github.com"
-          git add backend/collector/state backend/collector/report.md backend/collector/rates-report.md
+          git add backend/collector/state backend/collector/report.md backend/collector/rates-report.md backend/extractor backend/offers
+          if git diff --cached --name-only | grep -qE '^backend/offers/[^/]+\.json$'; then
+            echo "offers_changed=true" >> "$GITHUB_OUTPUT"
+          fi
           git diff --cached --quiet || git commit -m "Wykrywacz zmian: raport $(date -u +%F)"
           git push
+
+      - name: Opublikuj migawkę po zmianie ofert
+        if: steps.commit.outputs.offers_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --ref main
+
+      - name: Zgłoś sprawy do przeglądu (Issue)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q "^## WYMAGA PRZEGLĄDU" backend/extractor/sync-report.md || grep -q "KONFLIKT" backend/extractor/llm-report.txt; then
+            { cat backend/extractor/sync-report.md; echo; echo '## Ekstrakcja modelem'; cat backend/extractor/llm-report.txt; } > issue-body.md
+            title="Lokaty: oferty do przeglądu"
+            n=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+            if [ -n "$n" ]; then
+              gh issue edit "$n" --body-file issue-body.md
+            else
+              gh issue create --title "$title" --body-file issue-body.md
+            fi
+          fi
