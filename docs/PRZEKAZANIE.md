@@ -112,7 +112,9 @@ Jeśli dokumentów nie da się odczytać, ich treść streszcza ten plik i `docs
 - Kod: `backend/extractor/` (`parsers.py` Alior, PKO, mBank, Pekao „Lokuj z nami VII”; `sync_offers.py`; `llm_extract.py`; README), testy `tools/test_extractor.py` (21), próbki stron w `test-data/extractor/`, workflow `collect.yml` rozszerzony o synchronizację, model, publikację i Issue „Lokaty: oferty do przeglądu”. Wszystkie 63 testy lokalne OK.
 - Nietestowane na żywo: wywołanie API modelu (brak sieci w środowisku agenta; format zapytania i odpowiedzi sprawdzony tylko na atrapie), workflow w Actions, uprawnienia `issues: write` i `actions: write`. Spodziewaj się poprawek po pierwszym przebiegu.
 - Ograniczenia: brak parserów Pekao standardowa (tabela PDF), Erste, BNP, Millennium, VeloBank, ING, Citi (ING i Citi wymagają przeglądarki lub ręcznie). Strona „pekao-standardowa” w `sources.json` jest serwisem zewnętrznym i ma rolę `signal`.
-- Push z sesji agenta nadal zwraca 403 (brak instalacji Claude GitHub App); pliki wgrywane ręcznie.
+- Pierwszy przebieg na żywo (25.11.2026): automat zadziałał, wykrył wzrost stawek Alior do 3,6% (nowa edycja od 25.11: dzień odniesienia 20.11, limity od 25.11), ale zaktualizował samą stawkę, bo parser nie sprawdzał daty początku edycji. Naprawione: parsery Alior i mBank porównują też `valid_from`, test regresji dodany. Krok modelu został pominięty (komunikat „brak ANTHROPIC_API_KEY”: sekret niewidoczny dla workflow, do sprawdzenia nazwa i miejsce sekretu).
+- VeloBank: strona banku ma aktywną „Lokatę na Nowe Środki” edycja 14/2026 (13.11–9.12.2026): 2 mies. 3,0%, 3 mies. 3,2%, 6 mies. 3,5%, max 190 000 zł, nowe środki względem 9.11.2026 (wcześniejsza informacja z analizy.pl o wycofaniu była błędna). Dodane jako 3 zweryfikowane oferty z parserem; zasady zerwania nieznane.
+- Push z sesji agenta działa po instalacji Claude GitHub App (od 25.11.2026); pliki workflow nadal najlepiej wklejać ręcznie.
 
 ## 9. Jak pracujemy (praktyczne uwagi)
 

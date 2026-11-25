@@ -78,7 +78,7 @@ class SyncTest(unittest.TestCase):
         r = self.sync()
         self.assertEqual(r["review"], [])
         self.assertEqual(r["updated"], [])
-        self.assertEqual(len(r["confirmed"]), 8)
+        self.assertEqual(len(r["confirmed"]), 11)
         self.assertEqual(self.offer("alior/nowe-srodki-92d")["last_verified_at"], "2026-11-25T05:30:00Z")
 
     def test_sama_zmiana_stawki_aktualizuje_automatycznie(self):
