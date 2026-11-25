@@ -1,0 +1,49 @@
+{
+  "offer_id": "pekao/lokuj-z-nami-7",
+  "bank_id": "pekao",
+  "product_name": "Lokuj z nami VII (promocja 3 mies.)",
+  "verification": "verified",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "4.20",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-17",
+  "valid_until": "2027-01-20",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "no",
+    "account_required": "yes",
+    "one_time_only": "yes",
+    "notes": [
+      "Dla klientów nowych lub z saldami do 5 tys. zł: brak rachunku w Pekao od 1.08 do 16.11.2026 albo średnie saldo ≤ 5 000 zł w sierpniu, wrześniu i październiku 2026",
+      "Wymagane: konto osobiste w PLN (lub umowa o Konto Przekorzystne / Konto Świat Premium), karta debetowa lub Karta Kredytowa z Żubrem, zgoda na marketing elektroniczny",
+      "Jedna nieodnawialna lokata w promocji; po zerwaniu nie można otworzyć kolejnej w tej promocji",
+      "Przystąpienie do promocji: 17.11.2026–10.01.2027; lokatę można otworzyć najpóźniej 5. dnia roboczego po spełnieniu warunków; umowa do 20.01.2027",
+      "Nie dla klientów Bankowości Prywatnej",
+      "Stawka i warunki porównane ze stroną banku 25.11.2026"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.pekao.com.pl/klient-indywidualny/oszczedzam-i-inwestuje/lokuj-z-nami-7.html",
+  "retrieved_at": "2026-11-25T11:00:00Z",
+  "last_verified_at": "2026-11-25T11:00:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "interest_payout_terms"
+  ],
+  "amount_min": "5000",
+  "amount_max": "100000"
+}

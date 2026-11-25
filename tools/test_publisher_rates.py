@@ -31,8 +31,17 @@ class PublisherTest(unittest.TestCase):
         self.assertEqual({b["bank_id"] for b in snap["banks"]}, {o["bank_id"] for o in snap["offers"]})
 
     def test_drafts_are_never_published(self):
-        snap = publish.build(ROOT / "backend" / "banks.json", ROOT / "backend" / "offers", NOW)
-        self.assertNotIn("pekao/standardowa-12m", [o["offer_id"] for o in snap["offers"]])
+        template = json.loads((ROOT / "backend" / "offers" / "pko-bp__nowe-srodki-3m.json").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "offers" / "draft").mkdir(parents=True)
+            draft = dict(template, offer_id="pko-bp/tylko-szkic", verification="draft")
+            (d / "offers" / "draft" / "szkic.json").write_text(json.dumps(draft), encoding="utf-8")
+            (d / "offers" / "ok.json").write_text(json.dumps(template), encoding="utf-8")
+            snap = publish.build(ROOT / "backend" / "banks.json", d / "offers", NOW)
+        ids = [o["offer_id"] for o in snap["offers"]]
+        self.assertIn(template["offer_id"], ids)
+        self.assertNotIn("pko-bp/tylko-szkic", ids)
 
     def test_unknown_bank_is_error(self):
         with tempfile.TemporaryDirectory() as d:
