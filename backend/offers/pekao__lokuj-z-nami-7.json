@@ -37,8 +37,8 @@
   },
   "availability_rule": "next_business_day",
   "source_url": "https://www.pekao.com.pl/klient-indywidualny/oszczedzam-i-inwestuje/lokuj-z-nami-7.html",
-  "retrieved_at": "2026-11-25T21:55:32Z",
-  "last_verified_at": "2026-11-25T21:55:32Z",
+  "retrieved_at": "2026-11-26T15:31:36Z",
+  "last_verified_at": "2026-11-26T15:31:36Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",
