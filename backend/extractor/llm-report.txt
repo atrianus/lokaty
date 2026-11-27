@@ -1,1 +1,10 @@
-Ekstrakcja modelem pominięta: brak ANTHROPIC_API_KEY
+- pko-bp-nowe-srodki: ofert 0, odrzuconych 2, konfliktów 0
+- erste-lokata-terminowa: ofert 0, odrzuconych 3, konfliktów 0
+- erste-oprocentowanie: ofert 0, odrzuconych 7, konfliktów 0
+- mbank-promo-3m: ofert 0, odrzuconych 2, konfliktów 0
+- bnp-oszczednosci: ofert 7, odrzuconych 2, konfliktów 0
+- millennium-nowe-srodki: ofert 0, odrzuconych 1, konfliktów 0
+- alior-oferta-lokat: ofert 0, odrzuconych 6, konfliktów 0
+- alior-nowe-srodki: ofert 3, odrzuconych 0, konfliktów 0
+- velobank-nowe-srodki: BŁĄD limit stron na przebieg, wróci następnego dnia
+- pekao-lokuj-z-nami-7: BŁĄD limit stron na przebieg, wróci następnego dnia

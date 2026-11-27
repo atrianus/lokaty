@@ -1,0 +1,73 @@
+{
+  "source_id": "alior-nowe-srodki",
+  "source_url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
+  "offers": [
+    {
+      "product_name": "Lokata na nowe środki – 92 dni",
+      "term_value": 92,
+      "term_unit": "days",
+      "rate_annual": "3,6",
+      "amount_min": "1000",
+      "amount_max": "300000",
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "yes",
+      "one_time_only": "unknown",
+      "early_termination_interest": "lose_all",
+      "eligibility_summary": "Lokata dla nowych środków w PLN: nadwyżka środków ponad saldo na 20 listopada 2026 r. na rachunkach depozytowych w Alior Banku. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r. wynosi 300 000 zł na każdy okres.",
+      "evidence": {
+        "rate": "92 dni 3,6%",
+        "term": "92 dni 3,6%",
+        "amounts": "Minimalna kwota lokaty wynosi 1 000 zł. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r., oddzielnie dla każdego z dostępnych okresów, wynosi 300 000 zł.",
+        "conditions": "Lokata na nowe środki jest dostępna dla Klientów, którzy deponują nowe środki, rozumiane jako nadwyżkę środków pieniężnych ponad łączne saldo środków zgromadzonych na należących do Klienta rachunkach oszczędnościowo rozliczeniowych, rachunkach oszczędnościowych oraz lokatach terminowych prowadzonych w złotych w Alior Banku, według stanu na 20 listopada 2026 r.",
+        "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+      }
+    },
+    {
+      "product_name": "Lokata na nowe środki – 182 dni",
+      "term_value": 182,
+      "term_unit": "days",
+      "rate_annual": "3,6",
+      "amount_min": "1000",
+      "amount_max": "300000",
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "yes",
+      "one_time_only": "unknown",
+      "early_termination_interest": "lose_all",
+      "eligibility_summary": "Lokata dla nowych środków w PLN: nadwyżka środków ponad saldo na 20 listopada 2026 r. na rachunkach depozytowych w Alior Banku. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r. wynosi 300 000 zł na każdy okres.",
+      "evidence": {
+        "rate": "182 dni 3,6%",
+        "term": "182 dni 3,6%",
+        "amounts": "Minimalna kwota lokaty wynosi 1 000 zł. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r., oddzielnie dla każdego z dostępnych okresów, wynosi 300 000 zł.",
+        "conditions": "Lokata na nowe środki jest dostępna dla Klientów, którzy deponują nowe środki, rozumiane jako nadwyżkę środków pieniężnych ponad łączne saldo środków zgromadzonych na należących do Klienta rachunkach oszczędnościowo rozliczeniowych, rachunkach oszczędnościowych oraz lokatach terminowych prowadzonych w złotych w Alior Banku, według stanu na 20 listopada 2026 r.",
+        "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+      }
+    },
+    {
+      "product_name": "Lokata na nowe środki – 365 dni",
+      "term_value": 365,
+      "term_unit": "days",
+      "rate_annual": "3",
+      "amount_min": "1000",
+      "amount_max": "300000",
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "yes",
+      "one_time_only": "unknown",
+      "early_termination_interest": "lose_all",
+      "eligibility_summary": "Lokata dla nowych środków w PLN: nadwyżka środków ponad saldo na 20 listopada 2026 r. na rachunkach depozytowych w Alior Banku. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r. wynosi 300 000 zł na każdy okres.",
+      "evidence": {
+        "rate": "365 dni 3%",
+        "term": "365 dni 3%",
+        "amounts": "Minimalna kwota lokaty wynosi 1 000 zł. Maksymalna łączna kwota lokat na nowe środki otwartych od 25 listopada 2026 r., oddzielnie dla każdego z dostępnych okresów, wynosi 300 000 zł.",
+        "conditions": "Lokata na nowe środki jest dostępna dla Klientów, którzy deponują nowe środki, rozumiane jako nadwyżkę środków pieniężnych ponad łączne saldo środków zgromadzonych na należących do Klienta rachunkach oszczędnościowo rozliczeniowych, rachunkach oszczędnościowych oraz lokatach terminowych prowadzonych w złotych w Alior Banku, według stanu na 20 listopada 2026 r.",
+        "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+      }
+    }
+  ],
+  "rejected": [],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}

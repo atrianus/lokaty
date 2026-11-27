@@ -1,0 +1,71 @@
+{
+  "source_id": "mbank-promo-3m",
+  "source_url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/",
+  "offers": [],
+  "rejected": [
+    {
+      "offer": {
+        "product_name": "Promocyjna lokata na 3 miesiące (Lokuj z mBankiem – edycja 10) – z mKontem Intensive",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "3,40",
+        "amount_min": "1 000 zł",
+        "amount_max": "200 000 zł",
+        "valid_from": "2026-10-29",
+        "valid_until": "2026-12-08",
+        "early_termination_interest": "lose_all",
+        "account_required": "yes",
+        "new_customer_only": "unknown",
+        "new_funds_only": "yes",
+        "one_time_only": "unknown",
+        "eligibility_summary": "Posiadacz rachunku osobistego w mBanku; przelew/wpłata Nowych środków; posiadacz lub współposiadacz mKonta Intensive. Do promocji można przystąpić do 08.12.2026 r. lub do wyczerpania puli. Maksymalna kwota wszystkich lokat promocyjnych: 200 000 PLN.",
+        "evidence": {
+          "rate": "promocyjne oprocentowanie 3,40% w skali roku jeśli masz mKonto Intensive",
+          "term": "3 miesiące; Otwórz 3-miesięczną lokatę na nowe środki",
+          "amounts": "minimalna kwota jednej lokaty 1 000 PLN; maksymalna kwota wszystkich lokat promocyjnych: 200 000 PLN",
+          "conditions": "Jeśli spełnisz warunki promocji, oprocentowanie ... 3,40% w skali roku - jeśli w chwili składania wniosku o lokatę promocyjną jesteś posiadaczem lub współposiadaczem mKonta Intensive",
+          "early_termination": "Oprocentowanie nominalne przy zerwaniu lokat promocyjnych przed terminem: 0,01% w skali roku. Jeśli zerwiesz lokatę przed jej zakończeniem nie otrzymasz promocyjnego oprocentowania."
+        }
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony",
+        "cytat „term” nie występuje w tekście strony",
+        "cytat „amounts” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony",
+        "cytat „early_termination” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Promocyjna lokata na 3 miesiące (Lokuj z mBankiem – edycja 10) – z innym kontem",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "3,00",
+        "amount_min": "1 000 zł",
+        "amount_max": "200 000 zł",
+        "valid_from": "2026-10-29",
+        "valid_until": "2026-12-08",
+        "early_termination_interest": "lose_all",
+        "account_required": "yes",
+        "new_customer_only": "unknown",
+        "new_funds_only": "yes",
+        "one_time_only": "unknown",
+        "eligibility_summary": "Posiadacz rachunku osobistego w mBanku; przelew/wpłata Nowych środków; osoba nieposiadająca mKonta Intensive. Do promocji można przystąpić do 08.12.2026 r. lub do wyczerpania puli.",
+        "evidence": {
+          "rate": "3,00% w skali roku jeśli masz inne konto (np. eKonto)",
+          "term": "3 miesiące",
+          "amounts": "minimalna kwota jednej lokaty 1 000 PLN; maksymalna kwota wszystkich lokat promocyjnych: 200 000 PLN",
+          "conditions": "3,00% w skali roku – jeśli w chwili składania wniosku o lokatę promocyjną nie jesteś posiadaczem lub współposiadaczem mKonta Intensive",
+          "early_termination": "Oprocentowanie nominalne przy zerwaniu lokat promocyjnych przed terminem: 0,01% w skali roku."
+        }
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony",
+        "cytat „amounts” nie występuje w tekście strony"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}

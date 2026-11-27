@@ -1,0 +1,212 @@
+{
+  "source_id": "bnp-oszczednosci",
+  "source_url": "https://www.bnpparibas.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+  "offers": [
+    {
+      "product_name": "Lokata Overnight",
+      "term_value": 1,
+      "term_unit": "days",
+      "rate_annual": "5",
+      "evidence": {
+        "rate": "5% w skali roku",
+        "term": "Lokata Overnight",
+        "conditions": "promocyjne oprocentowanie zmienne"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": null,
+      "amount_max": null,
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    },
+    {
+      "product_name": "Twoja Lokata na nowe środki",
+      "term_value": 4,
+      "term_unit": "months",
+      "rate_annual": "3,45",
+      "evidence": {
+        "rate": "3,45% w skali roku na 4 miesiące od 1 000 zł",
+        "term": "na 4 miesiące",
+        "amounts": "od 1 000 zł",
+        "conditions": "Twoja Lokata na nowe środki"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "yes",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": "1000",
+      "amount_max": null,
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    },
+    {
+      "product_name": "Lokata na Nowe Środki",
+      "term_value": 12,
+      "term_unit": "months",
+      "rate_annual": "3,00",
+      "evidence": {
+        "rate": "Do 3,00% w skali roku na 3, 6, 12 miesięcy od 1 000 zł",
+        "term": "na 3, 6, 12 miesięcy",
+        "amounts": "od 1 000 zł"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": "1000",
+      "amount_max": null,
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    },
+    {
+      "product_name": "Lokata GOmobile",
+      "term_value": 5,
+      "term_unit": "months",
+      "rate_annual": "1,25",
+      "evidence": {
+        "rate": "1,25% w skali roku na 5 miesięcy do 50 000 zł",
+        "term": "na 5 miesięcy",
+        "amounts": "do 50 000 zł"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": null,
+      "amount_max": "50000",
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    },
+    {
+      "product_name": "Lokata standardowa walutowa w USD",
+      "term_value": 12,
+      "term_unit": "months",
+      "rate_annual": "0,01",
+      "evidence": {
+        "rate": "0,01% w skali roku na 3, 6 lub 12 miesięcy od 1 000 USD.",
+        "term": "na 3, 6 lub 12 miesięcy",
+        "amounts": "od 1 000 USD"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": "1000 USD",
+      "amount_max": null,
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": "Lokata walutowa - oferta walutowa"
+    },
+    {
+      "product_name": "Lokata dla Samodzielniaka",
+      "term_value": 3,
+      "term_unit": "months",
+      "rate_annual": "1",
+      "evidence": {
+        "rate": "1% w skali roku do 5 000 zł na 3 miesiące.",
+        "term": "na 3 miesiące",
+        "amounts": "do 5 000 zł"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": null,
+      "amount_max": "5000",
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    },
+    {
+      "product_name": "Lokata GO",
+      "term_value": 12,
+      "term_unit": "months",
+      "rate_annual": "0,50",
+      "evidence": {
+        "rate": "0,50% w skali roku na 1,3,6 lub 12 miesięcy od 1 000 zł.",
+        "term": "na 1,3,6 lub 12 miesięcy",
+        "amounts": "od 1 000 zł"
+      },
+      "account_required": "unknown",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "early_termination_interest": "unknown",
+      "amount_min": "1000",
+      "amount_max": null,
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null
+    }
+  ],
+  "rejected": [
+    {
+      "offer": {
+        "product_name": "Lokata Dynamiczny Zysk",
+        "term_value": 4,
+        "term_unit": "months",
+        "rate_annual": "8",
+        "evidence": {
+          "rate": "Do 8% w ostatnim 4. miesiącu trwania lokaty, do 50 000 zł.",
+          "term": "ostatni 4. miesiąc trwania lokaty",
+          "amounts": "do 50 000 zł"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "early_termination_interest": "unknown",
+        "amount_min": null,
+        "amount_max": "50000",
+        "valid_from": null,
+        "valid_until": null,
+        "eligibility_summary": "Stawka 8% dotyczy tylko ostatniego 4. miesiąca lokaty"
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Konto oszczędnościowe (Konto Lokacyjne) - Nowe Środki",
+        "term_value": 1,
+        "term_unit": "months",
+        "rate_annual": "3,60",
+        "evidence": {
+          "rate": "3,60% w skali roku do 100 000 zł Nowych Środków. Oprocentowanie promocyjne do 29.01.2027 r.",
+          "term": "konto bez terminu",
+          "amounts": "do 100 000 zł",
+          "conditions": "Oprocentowanie promocyjne do 29.01.2027 r."
+        },
+        "account_required": "yes",
+        "new_customer_only": "unknown",
+        "new_funds_only": "yes",
+        "one_time_only": "unknown",
+        "early_termination_interest": "unknown",
+        "amount_min": null,
+        "amount_max": "100000",
+        "valid_from": null,
+        "valid_until": "2027-01-29",
+        "eligibility_summary": "Konto oszczędnościowe, nie lokata; uwzględnione z uwagi na warunek Nowych Środków"
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}
