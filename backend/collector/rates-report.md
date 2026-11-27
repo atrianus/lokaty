@@ -6,6 +6,13 @@
 - **ok** `alior/nowe-srodki-182d` (verified): stawka 3.60% jest na stronie
 - **ok** `alior/nowe-srodki-365d` (verified): stawka 3.00% jest na stronie
 - **ok** `alior/nowe-srodki-92d` (verified): stawka 3.60% jest na stronie
+- **ok** `bnp-paribas/twoja-lokata-4m` (verified): stawka 3.45% jest na stronie
+- **ok** `erste-bank-polska/lokata-dla-mlodych-2m` (verified): stawka 5.00% jest na stronie
+- **ok** `erste-bank-polska/lokata-jesienna-3m` (verified): stawka 2.50% jest na stronie
+- **ok** `erste-bank-polska/lokata-terminowa-12m` (verified): stawka 1.50% jest na stronie
+- **ok** `erste-bank-polska/lokata-terminowa-3m` (verified): stawka 1.00% jest na stronie
+- **ok** `erste-bank-polska/lokata-terminowa-6m` (verified): stawka 1.25% jest na stronie
+- **ok** `erste-bank-polska/lokata-z-funduszem-3m` (verified): stawka 5.50% jest na stronie
 - **ok** `mbank/promo-3m-intensive` (verified): stawka 3.40% jest na stronie
 - **ok** `mbank/promo-3m-standard` (verified): stawka 3.00% jest na stronie
 - **ok** `mbank/promocyjna-3m-inne-konto` (draft): stawka 3.00% jest na stronie

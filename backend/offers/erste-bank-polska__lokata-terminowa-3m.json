@@ -1,0 +1,46 @@
+{
+  "offer_id": "erste-bank-polska/lokata-terminowa-3m",
+  "bank_id": "erste-bank-polska",
+  "product_name": "Lokata terminowa 3 mies.",
+  "verification": "verified",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "1.00",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-27",
+  "conditions": {
+    "new_customer_only": "unknown",
+    "new_funds_only": "no",
+    "account_required": "unknown",
+    "one_time_only": "no",
+    "notes": [
+      "Stawki w skali rocznej (strona banku, 27.11.2026); lokata w Erste online i w oddziałach",
+      "Maks. 1 mln zł w Erste online, w placówce brak limitu wpłaty",
+      "Przy wcześniejszym zakończeniu lokaty odsetki nie są wypłacane",
+      "Data początku obowiązywania to dzień odczytu strony (27.11.2026), strona nie podaje daty; koniec oferty nieznany"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.erste.pl/klient-indywidualny/oszczednosci-i-inwestycje/lokata-terminowa",
+  "retrieved_at": "2026-11-27T21:01:31Z",
+  "last_verified_at": "2026-11-27T21:01:31Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "valid_until",
+    "amount_max"
+  ],
+  "amount_min": "1000"
+}

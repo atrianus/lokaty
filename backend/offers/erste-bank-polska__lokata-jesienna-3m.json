@@ -1,0 +1,45 @@
+{
+  "offer_id": "erste-bank-polska/lokata-jesienna-3m",
+  "bank_id": "erste-bank-polska",
+  "product_name": "Lokata jesienna 3 mies.",
+  "verification": "verified",
+  "term": {
+    "value": 3,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "2.50",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-27",
+  "conditions": {
+    "new_customer_only": "unknown",
+    "new_funds_only": "unknown",
+    "account_required": "unknown",
+    "one_time_only": "yes",
+    "notes": [
+      "1 lokata na klienta, w aplikacji Erste i bankowości internetowej Erste",
+      "Przy zerwaniu obowiązuje stopa 0% z wyjątkami opisanymi w tabeli oprocentowania",
+      "Data początku obowiązywania to dzień odczytu strony (27.11.2026), strona nie podaje daty; koniec oferty nieznany (oferta sezonowa)"
+    ]
+  },
+  "early_termination": {
+    "allowed": "yes",
+    "interest_treatment": "lose_all"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.erste.pl/przydatne-informacje/oprocentowanie",
+  "retrieved_at": "2026-11-27T21:01:31Z",
+  "last_verified_at": "2026-11-27T21:01:31Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "valid_until"
+  ],
+  "amount_min": "1000",
+  "amount_max": "100000"
+}
