@@ -1,4 +1,4 @@
-# Raport zmian ofert (2026-11-27 20:53 UTC)
+# Raport zmian ofert (2026-11-27 21:01 UTC)
 
 - **changed** `pekao-standardowa` (pekao): 2b905be93e21
 - **changed** `velobank-nowe-srodki` (velobank): 3c8b3a0a92d8

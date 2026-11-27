@@ -1,94 +1,88 @@
 {
   "source_id": "erste-lokata-terminowa",
   "source_url": "https://www.erste.pl/klient-indywidualny/oszczednosci-i-inwestycje/lokata-terminowa",
-  "offers": [],
-  "rejected": [
+  "offers": [
     {
-      "offer": {
-        "product_name": "Lokata terminowa (3 miesiące)",
-        "term_value": 3,
-        "term_unit": "months",
-        "rate_annual": "1,00",
-        "amount_min": "1000 zł",
-        "amount_max": "1 000 000 zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
-        "early_termination_interest": "lose_all",
-        "account_required": "unknown",
-        "new_customer_only": "unknown",
-        "new_funds_only": "unknown",
-        "one_time_only": "unknown",
-        "valid_from": null,
-        "valid_until": null,
-        "eligibility_summary": "Lokata terminowa w złotówkach; kwota minimalna 1000 zł; stawka stała w skali roku.",
-        "evidence": {
-          "rate": "3 miesiące 1,00%",
-          "term": "Wybierasz czas trwania lokaty na 3, 6, 12 miesięcy",
-          "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
-          "conditions": "Oprocentowanie stałe. Stawki oprocentowania podane są w skali rocznej. Lokata odnawia się automatycznie.",
-          "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek."
-        }
+      "product_name": "Lokata terminowa",
+      "term_value": 3,
+      "term_unit": "months",
+      "rate_annual": "1,00",
+      "amount_min": "1000 zł",
+      "amount_max": "1 mln zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
+      "account_required": "unknown",
+      "early_termination_interest": "lose_all",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null,
+      "evidence": {
+        "rate": "3 miesiące 1,00%",
+        "term": "Okres 3 miesiące",
+        "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
+        "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek.",
+        "conditions": "Stawki oprocentowania podane są w skali rocznej."
       },
-      "reasons": [
-        "cytat „conditions” nie występuje w tekście strony"
+      "unverified_quotes": [
+        "cytat „term” nie jest dosłownym fragmentem strony"
       ]
     },
     {
-      "offer": {
-        "product_name": "Lokata terminowa (6 miesięcy)",
-        "term_value": 6,
-        "term_unit": "months",
-        "rate_annual": "1,25",
-        "amount_min": "1000 zł",
-        "amount_max": "1 000 000 zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
-        "early_termination_interest": "lose_all",
-        "account_required": "unknown",
-        "new_customer_only": "unknown",
-        "new_funds_only": "unknown",
-        "one_time_only": "unknown",
-        "valid_from": null,
-        "valid_until": null,
-        "eligibility_summary": "Lokata terminowa w złotówkach; kwota minimalna 1000 zł; stawka stała w skali roku.",
-        "evidence": {
-          "rate": "6 miesięcy 1,25%",
-          "term": "Wybierasz czas trwania lokaty na 3, 6, 12 miesięcy",
-          "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
-          "conditions": "Oprocentowanie stałe. Stawki oprocentowania podane są w skali rocznej. Lokata odnawia się automatycznie.",
-          "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek."
-        }
+      "product_name": "Lokata terminowa",
+      "term_value": 6,
+      "term_unit": "months",
+      "rate_annual": "1,25",
+      "amount_min": "1000 zł",
+      "amount_max": "1 mln zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
+      "account_required": "unknown",
+      "early_termination_interest": "lose_all",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null,
+      "evidence": {
+        "rate": "6 miesięcy 1,25%",
+        "term": "Okres 6 miesięcy",
+        "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
+        "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek.",
+        "conditions": "Stawki oprocentowania podane są w skali rocznej."
       },
-      "reasons": [
-        "cytat „conditions” nie występuje w tekście strony"
+      "unverified_quotes": [
+        "cytat „term” nie jest dosłownym fragmentem strony"
       ]
     },
     {
-      "offer": {
-        "product_name": "Lokata terminowa (12 miesięcy)",
-        "term_value": 12,
-        "term_unit": "months",
-        "rate_annual": "1,50",
-        "amount_min": "1000 zł",
-        "amount_max": "1 000 000 zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
-        "early_termination_interest": "lose_all",
-        "account_required": "unknown",
-        "new_customer_only": "unknown",
-        "new_funds_only": "unknown",
-        "one_time_only": "unknown",
-        "valid_from": null,
-        "valid_until": null,
-        "eligibility_summary": "Lokata terminowa w złotówkach; kwota minimalna 1000 zł; stawka stała w skali roku.",
-        "evidence": {
-          "rate": "12 miesięcy 1,50%",
-          "term": "Wybierasz czas trwania lokaty na 3, 6, 12 miesięcy",
-          "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
-          "conditions": "Oprocentowanie stałe. Stawki oprocentowania podane są w skali rocznej. Lokata odnawia się automatycznie.",
-          "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek."
-        }
+      "product_name": "Lokata terminowa",
+      "term_value": 12,
+      "term_unit": "months",
+      "rate_annual": "1,50",
+      "amount_min": "1000 zł",
+      "amount_max": "1 mln zł (bankowość internetowa i aplikacja Erste; w placówce brak limitu wpłaty)",
+      "account_required": "unknown",
+      "early_termination_interest": "lose_all",
+      "new_customer_only": "unknown",
+      "new_funds_only": "unknown",
+      "one_time_only": "unknown",
+      "valid_from": null,
+      "valid_until": null,
+      "eligibility_summary": null,
+      "evidence": {
+        "rate": "12 miesięcy 1,50%",
+        "term": "Okres 12 miesięcy",
+        "amounts": "Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i aplikacja Erste 1 mln zł; w placówce brak limitu wpłaty.",
+        "early_termination": "Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek.",
+        "conditions": "Stawki oprocentowania podane są w skali rocznej."
       },
-      "reasons": [
-        "cytat „conditions” nie występuje w tekście strony"
+      "unverified_quotes": [
+        "cytat „term” nie jest dosłownym fragmentem strony"
       ]
     }
   ],
+  "rejected": [],
   "conflicts": [],
-  "extracted_at": "2026-11-27T20:53:22Z",
+  "extracted_at": "2026-11-27T21:01:31Z",
   "model": "claude-haiku-5-5"
 }

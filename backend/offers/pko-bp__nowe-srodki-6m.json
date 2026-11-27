@@ -33,8 +33,8 @@
   },
   "availability_rule": "next_business_day",
   "source_url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow",
-  "retrieved_at": "2026-11-27T20:53:21Z",
-  "last_verified_at": "2026-11-27T20:53:21Z",
+  "retrieved_at": "2026-11-27T21:01:30Z",
+  "last_verified_at": "2026-11-27T21:01:30Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",

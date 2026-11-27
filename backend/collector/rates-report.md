@@ -13,3 +13,6 @@
 - **ok** `pekao/lokuj-z-nami-7` (verified): stawka 4.20% jest na stronie
 - **ok** `pko-bp/nowe-srodki-3m` (verified): stawka 3.30% jest na stronie
 - **ok** `pko-bp/nowe-srodki-6m` (verified): stawka 3.40% jest na stronie
+- **ok** `velobank/nowe-srodki-2m` (verified): stawka 3.00% jest na stronie
+- **ok** `velobank/nowe-srodki-3m` (verified): stawka 3.20% jest na stronie
+- **ok** `velobank/nowe-srodki-6m` (verified): stawka 3.50% jest na stronie

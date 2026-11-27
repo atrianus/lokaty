@@ -1,39 +1,36 @@
 {
   "source_id": "millennium-nowe-srodki",
   "source_url": "https://www.bankmillennium.pl/klienci-indywidualni/produkty-oszczednosciowe/lokaty/lokata-na-nowe-srodki",
-  "offers": [],
-  "rejected": [
+  "offers": [
     {
-      "offer": {
-        "product_name": "Lokata na Nowe Środki",
-        "term_value": 3,
-        "term_unit": "months",
-        "rate_annual": "3,40",
-        "amount_min": "1000 zł",
-        "amount_max": null,
-        "account_required": "yes",
-        "new_customer_only": "unknown",
-        "new_funds_only": "yes",
-        "one_time_only": "unknown",
-        "early_termination_interest": "lose_all",
-        "eligibility_summary": "Dla posiadaczy rachunku oszczędnościowo-rozliczeniowego w PLN; warunkiem otwarcia jest posiadanie nowych środków; lokata nieodnawialna.",
-        "valid_from": null,
-        "valid_until": "2026-11-20",
-        "evidence": {
-          "rate": "Oprocentowanie lokaty wynosi 3,40% w skali roku przez okres 3 miesięcy.",
-          "term": "Okres lokaty: 3 miesiące",
-          "amounts": "Minimalna kwota lokaty to 1 000 zł.",
-          "conditions": "Lokata na Nowe Środki dostępna jest dla posiadaczy rachunku oszczędnościowo-rozliczeniowego w PLN w placówkach Banku oraz za pośrednictwem Millenet i aplikacji mobilnej. Lokata jest nieodnawialna. Warunkiem otwarcia lokaty jest posiadanie nowych środków.",
-          "early_termination": "Czy mogę zerwać Lokatę na Nowe Środki w każdej chwili? Tak, możliwe jest zerwanie lokaty w dowolnym momencie. W przypadku zerwania odsetki nie są wypłacane."
-        }
+      "product_name": "Lokata na Nowe Środki",
+      "term_value": 3,
+      "term_unit": "months",
+      "rate_annual": "3,40",
+      "amount_min": "1000 zł",
+      "amount_max": null,
+      "account_required": "yes",
+      "new_customer_only": "unknown",
+      "new_funds_only": "yes",
+      "one_time_only": "unknown",
+      "early_termination_interest": "lose_all",
+      "eligibility_summary": "Dla posiadaczy rachunku oszczędnościowo-rozliczeniowego w PLN; warunkiem otwarcia jest posiadanie nowych środków; lokata nieodnawialna.",
+      "valid_from": null,
+      "valid_until": "2026-11-20",
+      "evidence": {
+        "rate": "atrakcyjne oprocentowanie: 3,40% w skali roku na 3 miesiące",
+        "term": "Okres lokaty od 1000 zł 3 miesiące 3,40%",
+        "amounts": "Minimalna kwota lokaty to 1 000 zł.",
+        "conditions": "Lokata na Nowe Środki dostępna jest dla posiadaczy rachunku oszczędnościowo-rozliczeniowego w PLN w placówkach Banku oraz za pośrednictwem Millenet i aplikacji mobilnej. Lokata jest nieodnawialna. Warunkiem otwarcia lokaty jest posiadanie nowych środków.",
+        "early_termination": "Tak, możliwe jest zerwanie lokaty w dowolnym momencie. W przypadku zerwania odsetki nie są wypłacane."
       },
-      "reasons": [
-        "cytat „term” nie występuje w tekście strony",
-        "cytat „conditions” nie występuje w tekście strony"
+      "unverified_quotes": [
+        "cytat „conditions” nie jest dosłownym fragmentem strony"
       ]
     }
   ],
+  "rejected": [],
   "conflicts": [],
-  "extracted_at": "2026-11-27T20:53:22Z",
+  "extracted_at": "2026-11-27T21:01:31Z",
   "model": "claude-haiku-5-5"
 }

@@ -38,8 +38,8 @@
   },
   "availability_rule": "next_business_day",
   "source_url": "https://www.velobank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
-  "retrieved_at": "2026-11-25T22:30:00Z",
-  "last_verified_at": "2026-11-25T22:30:00Z",
+  "retrieved_at": "2026-11-27T21:01:30Z",
+  "last_verified_at": "2026-11-27T21:01:30Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",

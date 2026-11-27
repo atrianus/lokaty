@@ -35,8 +35,8 @@
   },
   "availability_rule": "next_business_day",
   "source_url": "https://www.mbank.pl/indywidualny/inwestycje-i-oszczednosci/lokaty/promocyjna-lokata-na-3msc/",
-  "retrieved_at": "2026-11-27T20:53:21Z",
-  "last_verified_at": "2026-11-27T20:53:21Z",
+  "retrieved_at": "2026-11-27T21:01:30Z",
+  "last_verified_at": "2026-11-27T21:01:30Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",
