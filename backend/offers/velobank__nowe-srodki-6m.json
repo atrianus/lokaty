@@ -1,0 +1,50 @@
+{
+  "offer_id": "velobank/nowe-srodki-6m",
+  "bank_id": "velobank",
+  "product_name": "Lokata na Nowe Środki 6 mies. (edycja 14/2026)",
+  "verification": "verified",
+  "term": {
+    "value": 6,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "3.50",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-13",
+  "valid_until": "2026-12-09",
+  "conditions": {
+    "new_customer_only": "no",
+    "new_funds_only": "yes",
+    "account_required": "no",
+    "one_time_only": "no",
+    "notes": [
+      "Nowe środki: nadwyżka względem stanu środków złotowych na koniec 9.11.2026",
+      "Do 3 lokat promocyjnych w każdym okresie lokowania, do 190 000 zł każda",
+      "Min. 1 000 zł w bankowości internetowej, mobilnej, przez infolinię i stronę (w placówkach 5 000 zł)",
+      "Wymagane zgody marketingowe; lokatę trzeba opłacić jednym przelewem ze swojego konta osobistego w ciągu 7 dni od wniosku",
+      "Kapitalizacja odsetek na koniec okresu; lokata odnawialna po okresie promocyjnym przechodzi na standardowe oprocentowanie",
+      "Zasady zerwania lokaty nie są podane na stronie, zweryfikuj w regulaminie promocji",
+      "Stawka i warunki porównane z tekstem strony banku 25.11.2026"
+    ]
+  },
+  "early_termination": {
+    "allowed": "unknown",
+    "interest_treatment": "bank_specific"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.velobank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
+  "retrieved_at": "2026-11-25T22:30:00Z",
+  "last_verified_at": "2026-11-25T22:30:00Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "early_termination_terms"
+  ],
+  "amount_min": "1000",
+  "amount_max": "190000"
+}

@@ -37,9 +37,14 @@ def alior_nowe_srodki(text):
     pairs = re.findall(r"(\d+(?:,\d+)?)\s*%\s*na\s*(\d+)\s*dni", m.group(1))
     lo = re.search(r"Minimalna kwota lokaty wynosi\s*([\d ]+?)\s*zł", t)
     hi = re.search(r"oddzielnie dla każdego z dostępnych okresów, wynosi\s*([\d ]+?)\s*zł", t)
+    frm = re.search(r"otwartych od (\d{1,2}) (\w+) (\d{4}) r", t)
+    try:
+        valid_from = pl_date(*frm.groups()) if frm else None
+    except (KeyError, ValueError):
+        valid_from = None
     out = {}
     for r, days in pairs:
-        out[f"alior/nowe-srodki-{days}d"] = {
+        out[f"alior/nowe-srodki-{days}d"] = {**({"valid_from": valid_from} if valid_from else {}),
             "rate_annual": rate(r), "term": {"value": int(days), "unit": "days"},
             "amount_min": money(lo.group(1)) if lo else None, "amount_max": money(hi.group(1)) if hi else None}
     return out
@@ -75,6 +80,9 @@ def mbank_promo_3m(text):
     until = re.search(r"Do promocji możesz przystąpić do (\d{2})\.(\d{2})\.(\d{4})", t)
     base = {"term": {"value": 3, "unit": "months"},
             "amount_min": money(lo.group(1)) if lo else None, "amount_max": money(hi.group(1)) if hi else None}
+    frm = re.search(r"obowiązuje od (\d{2})\.(\d{2})\.(\d{4})", t)
+    if frm:
+        base["valid_from"] = date(int(frm.group(3)), int(frm.group(2)), int(frm.group(1))).isoformat()
     if until:
         base["valid_until"] = date(int(until.group(3)), int(until.group(2)), int(until.group(1))).isoformat()
     out = {}
@@ -106,10 +114,30 @@ def pekao_lokuj_z_nami_7(text):
     return {"pekao/lokuj-z-nami-7": f}
 
 
+def velobank_nowe_srodki(text):
+    t = norm(text)
+    m = re.search(r"Promocja „Lokata na Nowe Środki” \(edycja [\d/]+\) trwa (\d{1,2})\.(\d{1,2})\.(\d{4}) r\. do (\d{1,2})\.(\d{1,2})\.(\d{4}) r\..{0,300}?oprocentowaniem promocyjnym w skali roku:(.{0,200}?)\. Minimalna", t)
+    if not m:
+        return {}
+    d1, m1, y1, d2, m2, y2 = map(int, m.groups()[:6])
+    pairs = re.findall(r"(\d+(?:,\d+)?)\s*%\s*na\s*(\d+)\s*(miesi)", m.group(7))
+    hi = re.search(r"maksymalnie 3 lokaty do ([\d ]+?)\s*zł każda", t)
+    lo = re.search(r"([\d ]+?)\s*zł \(w bankowości internetowej", t)
+    out = {}
+    for r, n, _ in pairs:
+        out[f"velobank/nowe-srodki-{n}m"] = {
+            "rate_annual": rate(r), "term": {"value": int(n), "unit": "months"},
+            "amount_min": money(lo.group(1).split("zł")[-1]) if lo else None,
+            "amount_max": money(hi.group(1)) if hi else None,
+            "valid_from": date(y1, m1, d1).isoformat(), "valid_until": date(y2, m2, d2).isoformat()}
+    return out
+
+
 # source_id -> (parser, prefiks offer_id obsługiwany przez parser)
 PARSERS = {
     "alior-nowe-srodki": (alior_nowe_srodki, "alior/nowe-srodki-"),
     "pko-bp-nowe-srodki": (pko_bp_nowe_srodki, "pko-bp/nowe-srodki-"),
     "mbank-promo-3m": (mbank_promo_3m, "mbank/promo-3m-"),
+    "velobank-nowe-srodki": (velobank_nowe_srodki, "velobank/nowe-srodki-"),
     "pekao-lokuj-z-nami-7": (pekao_lokuj_z_nami_7, "pekao/lokuj-z-nami-"),
 }
