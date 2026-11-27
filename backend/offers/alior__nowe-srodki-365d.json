@@ -35,8 +35,8 @@
   },
   "availability_rule": "next_business_day",
   "source_url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/lokata-na-nowe-srodki.html",
-  "retrieved_at": "2026-11-26T15:31:36Z",
-  "last_verified_at": "2026-11-26T15:31:36Z",
+  "retrieved_at": "2026-11-27T15:25:27Z",
+  "last_verified_at": "2026-11-27T15:25:27Z",
   "completeness": "partial",
   "missing": [
     "day_count_rule",

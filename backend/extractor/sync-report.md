@@ -1,4 +1,4 @@
-# Synchronizacja ofert 2026-11-26 15:31 UTC
+# Synchronizacja ofert 2026-11-27 15:25 UTC
 
 ## Nic nie wymaga przeglądu
 

@@ -184,7 +184,6 @@ Lokata terminowa
 Lokata terminowa walutowa
 Lokata dla młodych
 Lokata jesienna
-Nowość
 Konta oszczędnościowe
 Konta oszczędnościowe
 Konto Pro oszczędnościowe
@@ -483,7 +482,6 @@ Lokata terminowa
 Lokata terminowa walutowa
 Lokata dla młodych
 Lokata jesienna
-Nowość
 Konta oszczędnościowe
 Konta oszczędnościowe
 Konto Pro oszczędnościowe
