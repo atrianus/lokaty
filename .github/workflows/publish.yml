@@ -42,7 +42,7 @@ jobs:
       - name: Zbuduj i sprawdź migawkę
         run: python backend/publisher/publish.py --out site
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
