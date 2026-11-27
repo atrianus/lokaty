@@ -1,0 +1,48 @@
+{
+  "offer_id": "bnp-paribas/twoja-lokata-4m",
+  "bank_id": "bnp-paribas",
+  "product_name": "Twoja Lokata na nowe środki 4 mies.",
+  "verification": "verified",
+  "term": {
+    "value": 4,
+    "unit": "months"
+  },
+  "interest_type": "at_maturity",
+  "rate_annual": "3.45",
+  "tax_timing": "at_end",
+  "day_count_rule": "unknown",
+  "rounding": {
+    "source": "default",
+    "mode": "half_up"
+  },
+  "valid_from": "2026-11-27",
+  "conditions": {
+    "new_customer_only": "unknown",
+    "new_funds_only": "yes",
+    "account_required": "unknown",
+    "one_time_only": "no",
+    "notes": [
+      "Stawka 3,45% w skali roku na 4 miesiące od 1 000 zł (strona banku, 27.11.2026)",
+      "Lokata na nowe środki; definicja nowych środków i data odniesienia nie są podane na liście ofert, sprawdź w regulaminie",
+      "Zasady zerwania lokaty nie są podane na stronie, zweryfikuj w regulaminie",
+      "Data początku obowiązywania to dzień odczytu strony (27.11.2026), strona nie podaje daty; koniec oferty nieznany"
+    ]
+  },
+  "early_termination": {
+    "allowed": "unknown",
+    "interest_treatment": "bank_specific"
+  },
+  "availability_rule": "next_business_day",
+  "source_url": "https://www.bnpparibas.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+  "retrieved_at": "2026-11-27T21:01:31Z",
+  "last_verified_at": "2026-11-27T21:01:31Z",
+  "completeness": "partial",
+  "missing": [
+    "day_count_rule",
+    "valid_until",
+    "early_termination_terms",
+    "amount_max",
+    "new_funds_definition"
+  ],
+  "amount_min": "1000"
+}
