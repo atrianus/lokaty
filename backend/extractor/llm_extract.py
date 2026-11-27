@@ -116,11 +116,14 @@ def verify(offer, text):
     return hard, soft
 
 
-def process_page(sid, source, text, offers_from_model):
+def process_page(sid, source, text, offers_from_model, today=None):
     ok, rejected, conflicts = [], [], []
     known = parsers.PARSERS.get(sid)
     det = known[0](text) if known else {}
     for o in offers_from_model:
+        if o.get("valid_until") and o["valid_until"] < (today or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
+            rejected.append({"offer": o, "reasons": [f"oferta wygasła {o['valid_until']}"]})
+            continue
         hard, soft = verify(o, text)
         if hard:
             rejected.append({"offer": o, "reasons": hard + soft})
@@ -128,11 +131,13 @@ def process_page(sid, source, text, offers_from_model):
         if soft:
             o["unverified_quotes"] = soft  # człowiek sprawdza przy zatwierdzaniu szkicu
         ok.append(o)
-        for oid, f in det.items():
-            if f["term"] == {"value": o["term_value"], "unit": o["term_unit"]}:
-                r = o["rate_annual"].replace(",", ".")
-                if f["rate_annual"] != str(Decimal(r).quantize(Decimal("0.01"))):
-                    conflicts.append(f"{oid}: parser {f['rate_annual']}% vs model {o['rate_annual']}%")
+        # konflikt tylko wtedy, gdy parser zna oferty na ten termin, a stawki modelu wśród nich nie ma
+        # (jeden bank może mieć kilka ofert na ten sam termin, np. mBank z kontem i bez)
+        same_term = {oid: f for oid, f in det.items() if f["term"] == {"value": o["term_value"], "unit": o["term_unit"]}}
+        if same_term:
+            r = str(Decimal(o["rate_annual"].replace(",", ".")).quantize(Decimal("0.01")))
+            if r not in {f["rate_annual"] for f in same_term.values()}:
+                conflicts.append(f"{o['product_name']} ({o['term_value']} {o['term_unit']}): model {o['rate_annual']}% vs parser {', '.join(sorted({f['rate_annual'] + '%' for f in same_term.values()}))}")
     return {"source_id": sid, "source_url": source["url"], "offers": ok, "rejected": rejected, "conflicts": conflicts}
 
 
