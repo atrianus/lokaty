@@ -1,0 +1,66 @@
+{
+  "source_id": "pko-bp-nowe-srodki",
+  "source_url": "https://www.pkobp.pl/klienci-indywidualni/oszczednosci/lokaty/lokata-na-dzien-dobry-dla-nowych-klientow",
+  "offers": [],
+  "rejected": [
+    {
+      "offer": {
+        "product_name": "Lokata na nowe środki (3 miesiące)",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "3,3",
+        "amount_min": "1 tys. zł",
+        "amount_max": "250 tys. zł",
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Możesz mieć 3 takie lokaty równocześnie; wpłata na każdą lokatę od 1 tys. zł do maks. 250 tys. zł, do limitu nowych środków; okres oferowania 15.11-14.12.2026 r.",
+        "evidence": {
+          "rate": "3,3% w skali roku na 3 mies.",
+          "term": "na 3 mies.",
+          "amounts": "Na każdą lokatę wpłacisz od 1 tys. zł do maks. 250 tys. zł – do limitu nowych środków",
+          "conditions": "Możesz mieć 3 takie lokaty równocześnie; Masz stałe oprocentowanie w okresie umownym; Zaloguj się i otwórz; Nie masz u nas konta? ",
+          "early_termination": "Tak, ale wtedy otrzymasz wpłacone pieniądze bez odsetek."
+        },
+        "new_customer_only": "unknown",
+        "new_funds_only": "yes",
+        "one_time_only": "unknown",
+        "valid_from": "2026-11-15",
+        "valid_until": "2026-12-14"
+      },
+      "reasons": [
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata na nowe środki (6 miesięcy)",
+        "term_value": 6,
+        "term_unit": "months",
+        "rate_annual": "3,4",
+        "amount_min": "1 tys. zł",
+        "amount_max": "250 tys. zł",
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Możesz mieć 3 takie lokaty równocześnie; wpłata na każdą lokatę od 1 tys. zł do maks. 250 tys. zł, do limitu nowych środków; okres oferowania 15.11-14.12.2026 r.",
+        "evidence": {
+          "rate": "3,4% w skali roku na 6 mies.",
+          "term": "na 6 mies.",
+          "amounts": "Na każdą lokatę wpłacisz od 1 tys. zł do maks. 250 tys. zł – do limitu nowych środków",
+          "conditions": "Możesz mieć 3 takie lokaty równocześnie; Masz stałe oprocentowanie w okresie umownym; Zaloguj się i otwórz",
+          "early_termination": "Tak, ale wtedy otrzymasz wpłacone pieniądze bez odsetek."
+        },
+        "new_customer_only": "unknown",
+        "new_funds_only": "yes",
+        "one_time_only": "unknown",
+        "valid_from": "2026-11-15",
+        "valid_until": "2026-12-14"
+      },
+      "reasons": [
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}

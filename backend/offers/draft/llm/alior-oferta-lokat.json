@@ -1,0 +1,183 @@
+{
+  "source_id": "alior-oferta-lokat",
+  "source_url": "https://www.aliorbank.pl/klienci-indywidualni/oszczednosci/oferta-lokat.html",
+  "offers": [],
+  "rejected": [
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 3 miesiące",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "1",
+        "amount_min": "1000 PLN",
+        "amount_max": null,
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Lokata standardowa w PLN; lokaty dostępne w PLN, USD, EUR i GBP; wymagane konto oszczędnościowe lub osobiste (bez konta nie można założyć lokaty online).",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "3 miesiące 1% (PLN) – Oprocentowanie stałe",
+          "term": "Termin lokaty: 3 miesiące",
+          "amounts": "Minimalna kwota lokaty wynosi 1 000 PLN, 200 EUR, 200 USD lub 200 GBP.",
+          "conditions": "Oprocentowanie lokaty standardowej w PLN, EUR, USD i GBP jest stałe i podawane w skali roku.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony",
+        "cytat „term” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 4 miesiące (Alior Online / Alior Mobile)",
+        "term_value": 4,
+        "term_unit": "months",
+        "rate_annual": "2,3",
+        "amount_min": "1000 PLN",
+        "amount_max": "50 000 PLN łącznie",
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Oferta dostępna wyłącznie w Alior Online oraz Alior Mobile; klient może otworzyć lokaty na łączną kwotę 50 000 PLN włącznie.",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "4 miesiące 2,3%* ",
+          "term": "Termin lokaty: 4 miesiące",
+          "amounts": "Klient może otworzyć lokaty na maksymalną łączną kwotę 50 000 PLN włącznie (minimalna kwota pojedynczej lokaty wynosi 1 000 PLN).",
+          "conditions": "*Oferta dostępna wyłącznie w bankowości internetowej Alior Online oraz bankowości mobilnej Alior Mobile.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 6 miesięcy",
+        "term_value": 6,
+        "term_unit": "months",
+        "rate_annual": "1,3",
+        "amount_min": "1000 PLN",
+        "amount_max": null,
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Lokata standardowa w PLN; lokaty odnawialne domyślnie w Alior Online/Alior Mobile.",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "6 miesięcy 1,3%",
+          "term": "Termin lokaty: 6 miesięcy",
+          "amounts": "Minimalna kwota lokaty wynosi 1 000 PLN, 200 EUR, 200 USD lub 200 GBP.",
+          "conditions": "Oprocentowanie stałe, podawane w skali roku.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 12 miesięcy",
+        "term_value": 12,
+        "term_unit": "months",
+        "rate_annual": "1,5",
+        "amount_min": "1000 PLN",
+        "amount_max": null,
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Lokata standardowa w PLN; lokaty odnawialne domyślnie w Alior Online/Alior Mobile.",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "12 miesięcy 1,5%",
+          "term": "Termin lokaty: 12 miesięcy",
+          "amounts": "Minimalna kwota lokaty wynosi 1 000 PLN, 200 EUR, 200 USD lub 200 GBP.",
+          "conditions": "Oprocentowanie stałe, podawane w skali roku.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 24 miesiące",
+        "term_value": 24,
+        "term_unit": "months",
+        "rate_annual": "2",
+        "amount_min": "1000 PLN",
+        "amount_max": null,
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Lokata standardowa w PLN; lokaty odnawialne domyślnie w Alior Online/Alior Mobile.",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "24 miesiące 2%",
+          "term": "Termin lokaty: 24 miesiące",
+          "amounts": "Minimalna kwota lokaty wynosi 1 000 PLN, 200 EUR, 200 USD lub 200 GBP.",
+          "conditions": "Oprocentowanie stałe, podawane w skali roku.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata standardowa w PLN – 36 miesięcy",
+        "term_value": 36,
+        "term_unit": "months",
+        "rate_annual": "2,5",
+        "amount_min": "1000 PLN",
+        "amount_max": null,
+        "account_required": "unknown",
+        "early_termination_interest": "lose_all",
+        "eligibility_summary": "Lokata standardowa w PLN; lokaty odnawialne domyślnie w Alior Online/Alior Mobile.",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "unknown",
+        "valid_from": null,
+        "valid_until": null,
+        "evidence": {
+          "rate": "36 miesięcy 2,5%",
+          "term": "Termin lokaty: 36 miesięcy",
+          "amounts": "Minimalna kwota lokaty wynosi 1 000 PLN, 200 EUR, 200 USD lub 200 GBP.",
+          "conditions": "Oprocentowanie stałe, podawane w skali roku.",
+          "early_termination": "Likwidacja lokaty przed terminem jej zakończenia skutkuje zwrotem kapitału oraz utratą całości odsetek naliczonych w bieżącym okresie umownym."
+        }
+      },
+      "reasons": [
+        "cytat „term” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}

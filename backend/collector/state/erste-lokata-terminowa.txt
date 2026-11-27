@@ -184,7 +184,6 @@ Lokata terminowa
 Lokata terminowa walutowa
 Lokata dla młodych
 Lokata jesienna
-Nowość
 Konta oszczędnościowe
 Konta oszczędnościowe
 Konto Pro oszczędnościowe
@@ -483,7 +482,6 @@ Lokata terminowa
 Lokata terminowa walutowa
 Lokata dla młodych
 Lokata jesienna
-Nowość
 Konta oszczędnościowe
 Konta oszczędnościowe
 Konto Pro oszczędnościowe
@@ -593,18 +591,16 @@ Lokata terminowa
 Lokata terminowa
 Ciesz się z zaoszczędzonych pieniędzy
 Załóż lokatę
-Najważniejsze informacje
-Oprocentowanie
-Korzystaj ze stałego oprocentowania
-w skali roku
-Kwota minimalna
-Zacznij oszczędzać już od 1000 zł
-Kwota maksymalna
-Maksymalna kwota to 1 000 000 zł w bankowości internetowej Erste i aplikacji Erste
-Okres oszczędzania
-Oszczędzaj na
-3, 6, 12 miesięcy
-Więcej o lokacie terminowej
+Co możesz zyskać
+Co warto wiedzieć
+Jak założyć lokatę
+Oprocentowanie i dokumenty
+Co możesz zyskać z lokatą
+Korzystasz ze stałego oprocentowania w skali roku
+Możesz oszczędzać już od 1000 zł do 1 000 000 zł w Erste
+online
+Wybierasz czas trwania lokaty na 3, 6, 12 miesięcy
+Co warto wiedzieć o Lokacie terminowej
 Możesz założyć dowolną liczbę lokat.
 Na lokacie terminowej oszczędzasz w złotówkach, możesz wpłacić stare i nowe środki.
 Założysz ją w bankowości internetowej Erste, aplikacji Erste lub w oddziale.
@@ -615,9 +611,41 @@ więcej informacji o BFG
 Uruchomi się w nowym oknie
 Jeśli potrzebujesz wcześniej wypłacić pieniądze, możesz zakończyć lokatę, nie otrzymasz wtedy odsetek.
 Załóż lokatę
+szczegóły
+Jak założyć lokatę
+aplikacja Erste
+bankowość internetowa Erste
+Zaloguj się
+Wybierz Ofertę i w sekcji Oszczędności wybierz Lokaty. Kliknij na Sprawdź ofertę.
+Wpisz kwotę lokaty
+Wybierz Lokatę terminową przyciskiem Wybieram. Wpisz na jaką kwotę chcesz ją założyć.
+Załóż lokatę
+Zapoznaj się z dokumentami. Zaakceptuj je i załóż lokatę.
+Zaloguj się
+Wejdź w oszczędności i inwestycje i sprawdź ofertę lokat.
+Wpisz kwotę lokaty
+Wybierz Lokatę terminową przyciskiem Wybieram. Wpisz na jaką kwotę chcesz ją założyć.
+Załóż lokatę
+Zapoznaj się z dokumentami. Zaakceptuj je i określ, czy masz obowiązki podatkowe w innych krajach niż Polska. Załóż lokatę.
+Załóż lokatę
+szczegóły
+aplikacja Erste
+Zaloguj się
+Wybierz Ofertę i w sekcji Oszczędności wybierz Lokaty. Kliknij na Sprawdź ofertę.
+Wpisz kwotę lokaty
+Wybierz Lokatę terminową przyciskiem Wybieram. Wpisz na jaką kwotę chcesz ją założyć.
+Załóż lokatę
+Zapoznaj się z dokumentami. Zaakceptuj je i załóż lokatę.
+bankowość internetowa Erste
+Zaloguj się
+Wejdź w oszczędności i inwestycje i sprawdź ofertę lokat.
+Wpisz kwotę lokaty
+Wybierz Lokatę terminową przyciskiem Wybieram. Wpisz na jaką kwotę chcesz ją założyć.
+Załóż lokatę
+Zapoznaj się z dokumentami. Zaakceptuj je i określ, czy masz obowiązki podatkowe w innych krajach niż Polska. Załóż lokatę.
+Załóż lokatę
+szczegóły
 Oprocentowanie i dokumenty
-Oprocentowanie
-Dokumenty
 Oprocentowanie
 Okres
 Oprocentowanie stałe
@@ -631,46 +659,22 @@ Kwota minimalna 1000 zł. Kwota maksymalna w bankowości internetowej Erste i ap
 Stawki oprocentowania podane są w skali rocznej.
 Dokumenty
 Regulamin kont dla klientów indywidualnych
-25 Kwiecień 2026 r.
-771.2 kB
-PDF
-pl_PL
-Pobierz
+(PDF)
 Uruchomi się w nowym oknie
 Lokata terminowa - warunki prowadzenia
-25 Kwiecień 2026 r.
-92.1 kB
-PDF
-pl_PL
-Pobierz
+(PDF)
 Uruchomi się w nowym oknie
 Zasady ochrony depozytów przez Bankowy Fundusz Gwarancyjny
-25 Kwiecień 2026 r.
-236.9 kB
-PDF
-pl_PL
-Pobierz
+(PDF)
 Uruchomi się w nowym oknie
-BFG - Arkusz informacyjny dla deponentów
-25 Kwiecień 2026 r.
-175.4 kB
-PDF
-pl_PL
-Pobierz
+BFG - Arkusz informacyjny dla deponentow
+(PDF)
 Uruchomi się w nowym oknie
 Tabela oprocentowania kont oraz lokat terminowych dla klientów indywidualnych
-15 Październik 2026 r.
-215.1 kB
-PDF
-pl_PL
-Pobierz
+(PDF)
 Uruchomi się w nowym oknie
 Lokata terminowa w usługach Erste online - warunki prowadzenia
-25 Kwiecień 2026 r.
-99.0 kB
-PDF
-pl_PL
-Pobierz
+(PDF)
 Uruchomi się w nowym oknie
 Załóż lokatę
 Polecamy
@@ -683,6 +687,10 @@ Więcej
 Moje cele
 Odkładaj pieniądze na marzenia w aplikacji Erste. Sprawdź jakie to łatwe
 Więcej
+Szczegóły oferty, informacje o opłatach i prowizjach udostępniamy na naszej stronie. Stan na 24.11.2026 r.
+Rachunek Moje cele to rachunek do celowego oszczędzania w Erste
+online
+.
 Słowniczek pojęć i definicji dotyczących usług reprezentatywnych
 Słowniczek pojęć i definicji dotyczących usług reprezentatywnych, wynikających z rozporządzenia Ministra Rozwoju i Finansów z dnia 14 lipca 2017 r. w sprawie wykazu usług reprezentatywnych powiązanych z rachunkiem płatniczym, dostępny jest na stronie
 erste.pl/PAD

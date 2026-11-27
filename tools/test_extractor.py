@@ -161,22 +161,34 @@ class LlmTest(unittest.TestCase):
                 "evidence": {"rate": "4,2% w skali roku na 3 miesiące", "term": "na 3 miesiące", "amounts": "maksymalnie na lokatę możesz wpłacić 100.000 zł"}}
 
     def test_poprawna_oferta_przechodzi(self):
-        self.assertEqual(llm_extract.verify(self.good(), self.TEXT), [])
+        self.assertEqual(llm_extract.verify(self.good(), self.TEXT), ([], []))
 
-    def test_wymyslony_cytat_odrzucony(self):
+    def test_cytat_z_wieloma_fragmentami_przechodzi(self):
+        o = self.good()
+        o["evidence"]["conditions"] = "Lokuj z nami VII … od 17 listopada 2026 r. do 10 stycznia 2027 r."
+        self.assertEqual(llm_extract.verify(o, self.TEXT), ([], []))
+
+    def test_niedoslowny_cytat_oznacza_ale_nie_odrzuca(self):
         o = self.good()
         o["evidence"]["conditions"] = "bez żadnych warunków dla wszystkich"
-        self.assertTrue(any("cytat" in w for w in llm_extract.verify(o, self.TEXT)))
+        hard, soft = llm_extract.verify(o, self.TEXT)
+        self.assertEqual(hard, [])
+        self.assertTrue(any("cytat" in w for w in soft))
+        res = llm_extract.process_page("pekao-lokuj-z-nami-7", {"url": "u"}, self.TEXT, [o])
+        self.assertEqual(len(res["offers"]), 1)
+        self.assertTrue(res["offers"][0]["unverified_quotes"])
 
     def test_wymyslona_stawka_odrzucona(self):
         o = self.good()
         o["rate_annual"] = "5,5"
-        self.assertTrue(any("stawki" in w for w in llm_extract.verify(o, self.TEXT)))
+        self.assertTrue(any("stawki" in w for w in llm_extract.verify(o, self.TEXT)[0]))
+        res = llm_extract.process_page("pekao-lokuj-z-nami-7", {"url": "u"}, self.TEXT, [o])
+        self.assertEqual((len(res["offers"]), len(res["rejected"])), (0, 1))
 
     def test_wymyslona_kwota_odrzucona(self):
         o = self.good()
         o["amount_max"] = "250000"
-        self.assertTrue(any("kwoty" in w for w in llm_extract.verify(o, self.TEXT)))
+        self.assertTrue(any("kwoty" in w for w in llm_extract.verify(o, self.TEXT)[0]))
 
     def test_konflikt_z_parserem(self):
         o = self.good()

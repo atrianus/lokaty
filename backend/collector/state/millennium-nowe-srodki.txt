@@ -94,7 +94,7 @@ Lokata na Nowe Środki to doskonałe rozwiązanie dla nowych środków. Zyskujes
 atrakcyjne oprocentowanie: 3,40% w skali roku na 3 miesiące
 wystarczy 1000 zł nowych środków, aby otworzyć lokatę
 korzystasz wygodnie - zakładasz lokatę całkowicie online: w aplikacji mobilnej lub Millenecie
-dzień badania sald: 16.10.2026 r
+dzień badania sald: 20.11.2026 r
 template.externalLink.desc
 Lokatę na Nowe Środki.
 Otwórz teraz
@@ -196,6 +196,7 @@ Archiwalne daty badania sald
 24.07.2026 r.
 04.09.2026 r.
 16.10.2026 r.
+20.11.2026 r.
 Ukryty
 Nawigacja dolna
 Zadzwoń do nas

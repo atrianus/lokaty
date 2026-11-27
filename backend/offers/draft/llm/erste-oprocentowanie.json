@@ -1,0 +1,201 @@
+{
+  "source_id": "erste-oprocentowanie",
+  "source_url": "https://www.erste.pl/przydatne-informacje/oprocentowanie",
+  "offers": [],
+  "rejected": [
+    {
+      "offer": {
+        "product_name": "Lokata dla młodych",
+        "term_value": 2,
+        "term_unit": "months",
+        "rate_annual": "5",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata dla inwestora Okres 2 miesiące 5%",
+          "term": "2 miesiące",
+          "amounts": "Kwota min. 50 zł. Kwota maks. 2000 zł",
+          "conditions": "1 lokata dla dzieci od 0-17 lat w Erste online"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "yes",
+        "amount_min": "50 zł",
+        "amount_max": "2000 zł",
+        "eligibility_summary": "Dzieci od 0-17 lat, w Erste online; 1 lokata dla dziecka",
+        "early_termination_interest": "unknown",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata z funduszem",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "5.50",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata dla inwestora Okres 3 miesiące 5,50%",
+          "term": "3 miesiące",
+          "amounts": "kwota max 350 000 zł",
+          "conditions": "1 lokata, kwota max 350 000 zł. Możesz mieć jedną taką lokatę jeśli spełnisz warunki opisane w Załączniku do Regulaminu kont dla klientów indywidualnych dla tej lokaty."
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "yes",
+        "amount_min": null,
+        "amount_max": "350 000 zł",
+        "eligibility_summary": "Jedna lokata na klienta, po spełnieniu warunków z Załącznika do Regulaminu kont",
+        "early_termination_interest": "unknown",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata jesienna",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "2.50",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata jesienna Okres 3 miesiące 2,50%",
+          "term": "3 miesiące",
+          "amounts": "kwota min. 1 000 zł, kwota max. 100 000 zł",
+          "conditions": "Lokata jesienna w aplikacji Erste i bankowości internetowej Erste (1 lokata dla klienta)"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "yes",
+        "amount_min": "1 000 zł",
+        "amount_max": "100 000 zł",
+        "eligibility_summary": "1 lokata dla klienta, w aplikacji Erste i bankowości internetowej Erste",
+        "early_termination_interest": "lose_all",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony",
+        "cytat „conditions” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata terminowa",
+        "term_value": 3,
+        "term_unit": "months",
+        "rate_annual": "1.00",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata terminowa Okres 3 miesiące 1,00%",
+          "term": "3 miesiące",
+          "amounts": "Kwota min. 1000 zł. Kwota maks. w Erste online: 1 mln zł; w placówce: brak limitu wpłaty",
+          "conditions": "Lokata terminowa w Erste online oraz w oddziałach"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "no",
+        "amount_min": "1000 zł",
+        "amount_max": "1 mln zł (Erste online); w placówce brak limitu",
+        "eligibility_summary": "Erste online oraz oddziały",
+        "early_termination_interest": "lose_all",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata terminowa",
+        "term_value": 6,
+        "term_unit": "months",
+        "rate_annual": "1.25",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata terminowa Okres 6 miesięcy 1,25%",
+          "term": "6 miesięcy",
+          "amounts": "Kwota min. 1000 zł. Kwota maks. w Erste online: 1 mln zł; w placówce: brak limitu wpłaty",
+          "conditions": "Lokata terminowa w Erste online oraz w oddziałach"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "no",
+        "amount_min": "1000 zł",
+        "amount_max": "1 mln zł (Erste online); w placówce brak limitu",
+        "eligibility_summary": "Erste online oraz oddziały",
+        "early_termination_interest": "lose_all",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata terminowa",
+        "term_value": 12,
+        "term_unit": "months",
+        "rate_annual": "1.50",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata terminowa Okres 12 miesięcy 1,50%",
+          "term": "12 miesięcy",
+          "amounts": "Kwota min. 1000 zł. Kwota maks. w Erste online: 1 mln zł; w placówce: brak limitu wpłaty",
+          "conditions": "Lokata terminowa w Erste online oraz w oddziałach"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "no",
+        "amount_min": "1000 zł",
+        "amount_max": "1 mln zł (Erste online); w placówce brak limitu",
+        "eligibility_summary": "Erste online oraz oddziały",
+        "early_termination_interest": "lose_all",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony"
+      ]
+    },
+    {
+      "offer": {
+        "product_name": "Lokata terminowa walutowa USD",
+        "term_value": 6,
+        "term_unit": "months",
+        "rate_annual": "0.10",
+        "evidence": {
+          "rate": "Tabela oprocentowania Lokata terminowa walutowa 6 miesięcy USD 0,10%",
+          "term": "6 miesięcy",
+          "amounts": "kwota min. 1 000 USD",
+          "conditions": "Lokata terminowa w Erste online oraz w oddziałach"
+        },
+        "account_required": "unknown",
+        "new_customer_only": "unknown",
+        "new_funds_only": "unknown",
+        "one_time_only": "no",
+        "amount_min": "1 000 USD",
+        "amount_max": null,
+        "eligibility_summary": "Erste online oraz oddziały; waluta USD",
+        "early_termination_interest": "unknown",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "reasons": [
+        "cytat „rate” nie występuje w tekście strony"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "extracted_at": "2026-11-27T20:53:22Z",
+  "model": "claude-haiku-5-5"
+}
