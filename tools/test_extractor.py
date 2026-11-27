@@ -197,6 +197,31 @@ class LlmTest(unittest.TestCase):
         self.assertEqual(res["conflicts"], [])
         self.assertEqual(len(res["offers"]), 1)
 
+    def test_dwie_oferty_na_ten_sam_termin_nie_daja_falszywego_konfliktu(self):
+        """Regresja z 27.11.2026: mBank ma 3,40% i 3,00% na 3 mies."""
+        text = page("mbank-promo-3m")
+        mk = lambda r: {"product_name": "x", "term_value": 3, "term_unit": "months", "rate_annual": r,
+                        "evidence": {"rate": "3,40% w skali roku", "term": "3 miesiące"}}
+        res = llm_extract.process_page("mbank-promo-3m", {"url": "u"}, text, [mk("3,40"), mk("3,00")])
+        self.assertEqual(res["conflicts"], [])
+
+    def test_stawka_modelu_inna_niz_u_parsera_to_konflikt(self):
+        text = page("pko-bp-nowe-srodki").replace("3,3% w skali roku", "3,7% w skali roku")
+        o = {"product_name": "x", "term_value": 3, "term_unit": "months", "rate_annual": "3,3",
+             "evidence": {"rate": "3,3% w skali roku"}}
+        text += " 3,3% w skali roku "
+        res = llm_extract.process_page("pko-bp-nowe-srodki", {"url": "u"}, text, [o])
+        self.assertEqual(len(res["conflicts"]), 1)
+
+    def test_wygasla_oferta_odrzucona(self):
+        o = self.good()
+        o["valid_until"] = "2026-11-20"
+        res = llm_extract.process_page("pekao-lokuj-z-nami-7", {"url": "u"}, self.TEXT, [o], today="2026-11-27")
+        self.assertEqual((len(res["offers"]), len(res["rejected"])), (0, 1))
+        o["valid_until"] = "2027-01-20"
+        res = llm_extract.process_page("pekao-lokuj-z-nami-7", {"url": "u"}, self.TEXT, [o], today="2026-11-27")
+        self.assertEqual(len(res["offers"]), 1)
+
     def test_bez_klucza_nic_nie_robi(self):
         self.assertIn("skipped", llm_extract.run(key="", write=False))
 
